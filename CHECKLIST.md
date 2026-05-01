@@ -8,7 +8,7 @@
 - [ ] While Loops
 
 ## Phase 2: Data Storage
-- [ ] string 
+- [x] string 
 - [ ] set 
 - [ ] Lists & Tuples
 - [ ] Dictionaries (Key-Value)
