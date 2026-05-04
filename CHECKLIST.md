@@ -9,9 +9,9 @@
 
 ## Phase 2: Data Storage
 - [x] string 
-- [ ] set 
+- [x] set 
 - [x] Lists & Tuples
-- [ ] Dictionaries (Key-Value)
+- [x] Dictionaries (Key-Value)
 
 ## phase 3: Function & methods 
 - [ ] types of  functions
