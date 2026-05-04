@@ -76,11 +76,58 @@
 
 #example 2:
 
-peack_hours=(10,14, 20) #(representing 10 AM, 2 PM, and 8 PM).
+# peack_hours=(10,14, 20) #(representing 10 AM, 2 PM, and 8 PM).
 
-post_time= int(input("Enter you post time: "))
+# post_time= int(input("Enter you post time: "))
 
-if post_time == peack_hours[0] or peack_hours[2]:
-    print("Excellent timing! High engagement expected")
-else:
-    print("standard post time ")
+# if post_time == peack_hours[0] or post_time== peack_hours[2]:
+#     print("Excellent timing! High engagement expected")
+# else:
+#     print("standard post time ")
+
+
+# """ Dictionary """
+
+# #creating a Dictionary 
+
+# mi_player ={
+#     "name":"Rohit sharma",
+#     "team":"Mumbai Indians",
+#     "runs": 105 ,
+#     "lat_five_score": [105,10,36,0,11],
+    
+#     "squad":{ 
+#         "player_name": ["Rohit", "ishan", "Hardik", "Surya"]
+    
+
+#     },
+#     "unique_team":{"MI",'MI', "CSK"}
+
+    
+
+# }
+
+# # print(mi_player["lat_five_score"][-1])
+# # print(mi_player.keys())
+# # print(mi_player.get("team"))
+# print(mi_player["squad"]["player_name"])  
+# mi_player["squad"]["player_name"].append("Bumarah")
+# # print(mi_player["squad"].values())
+# mi_player["squad"]["player_name"].append("Rohit")
+# print(mi_player["squad"]["player_name"])
+# print(mi_player.get("unique_team"))
+
+## SET 
+
+mi_squad ={"Rohit", "Bumrah", " Hardik", "Sky"}
+
+indian_squad={"Gill", "Sanju", "Rohit", "Bumrah", 'Virat', "Sky"}
+
+print(mi_squad.union(indian_squad))
+
+mi_squad.add("Tilak")
+print(mi_squad)
+print(mi_squad.intersection(indian_squad))
+indian_squad.clear()
+print(indian_squad)
+
