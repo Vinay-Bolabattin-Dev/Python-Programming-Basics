@@ -4,8 +4,10 @@
 ## Phase 1: Logic & Flow 
 - [x] If / Elif / Else
 - [x] Nested Conditionals
-- [ ] For Loops
-- [ ] While Loops
+- [x] For Loops
+- [x] While Loops
+- [x] continue & break 
+- [x] Range()
 
 ## Phase 2: Data Storage
 - [x] string 
