@@ -6,6 +6,7 @@
 - [x] Nested Conditionals
 - [x] For Loops
 - [x] While Loops
+- [x] Nested Loop & pattern printing and also using user inputs to print 
 - [x] continue & break 
 - [x] Range()
 
