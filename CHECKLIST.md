@@ -17,7 +17,7 @@
 - [x] Dictionaries (Key-Value)
 
 ## phase 3: Function & methods 
-- [ ] types of  functions
+- [x] types of  functions
 - [ ] Recurstions
 
 
