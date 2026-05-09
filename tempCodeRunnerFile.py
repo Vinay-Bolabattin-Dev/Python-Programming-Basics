@@ -390,12 +390,12 @@
 
 # # # # #float_square(5, "@")
 
-# # # # def reverse_trangle(size, char):
-# # # #     for i in range(size+1,0,-1):
-# # # #         for j in range(i):
-# # # #             print(f"{char}", end="")
-# # # #         print()
-# # # # reverse_trangle(4,"!")
+# def reverse_trangle(size, char):
+#     for i in range(size+1,0,-1):
+#         for j in range(i):
+#             print(f"{char}", end="")
+#         print()
+# reverse_trangle(4,"!")
 
 # # ### parameter function 
 # # # # def describe_item(name, color):
@@ -436,15 +436,72 @@
 
 # # warm up challenge "Full project" shop management
 
-def final_checkout(price ,quantity, stock_available):
-    if quantity>=stock_available:
-        return "Transection failed : Not enough stock "
-    total=price*quantity
-    if total>=500:
-        total=total-50
+# def final_checkout(price ,quantity, stock_available):
+#     if quantity>=stock_available:
+#         return "Transection failed : Not enough stock "
+#     total=price*quantity
+#     if total>=500:
+#         total=total-50
         
-    return total
+#     return total
 
-print(final_checkout(200, 3, 10))
-print(final_checkout(100, 10, 5))
-                   
+# print(final_checkout(200, 3, 10))
+# print(final_checkout(100, 10, 5))
+
+## example for stock check         
+# products={
+#     "laptop": 50000,
+#     "Mouse": 1500,
+#     "Monitor":2000,
+# }
+
+# def stock_check(product):
+#     if product in products:
+#         print(f"Yes it is in stock, price: {products[product]}")
+#     else:
+#         print("Sorry!! Out of Stock")
+
+# # stock_check("Mouse")
+# # stock_check("Tv")
+
+# def get_final_price(product, quantity):
+#     if product in products:
+#         total= products[product]* quantity
+#         return total 
+#     else:
+#         return 0 
+# bill= get_final_price("Monitor", 3)
+# print(bill)
+
+""" FILE 
+Input and Out """
+
+with open("log.txt", "w") as f:
+    f.write("Day 11: I am learning File I/O today ")
+
+   
+
+with open("log.txt", "a") as  f:
+    f.write("\nThis is 2nd line of m")
+
+f= open("log.txt", "r")
+data=f.read()
+print(data)
+
+f.close()
+
+def find_word(target):
+    with open("log.txt","r") as f:
+        data=f.read()
+        if target in data:
+            print(f" {target}word Found")
+        else:
+            print(f"{target} Not found")
+        new_data=data.replace("m", "My practice or lerning ")
+    
+    with open("log.txt", "w") as f :
+        f.write(new_data)
+        print("File is Updated with new data ")
+        return new_data
+result=find_word("Python")
+print(result)
