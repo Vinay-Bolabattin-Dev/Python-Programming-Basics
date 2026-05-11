@@ -575,20 +575,40 @@ Input and Out """
 #     print("Acces not Granted!!")
 
 
-with open("scores.txt", "w") as f :
-    f.write("Rahul:45\nDeepak:82\nSagar:91\nKiran:30")
+# with open("scores.txt", "w") as f :
+#     f.write("Rahul:45\nDeepak:82\nSagar:91\nKiran:30")
 
-with open("scores.txt", "r") as f:
+# with open("scores.txt", "r") as f:
 
-    for line in f:
-        parts=line.strip().split(":")
+#     for line in f:
+#         parts=line.strip().split(":")
 
-        name=parts[0]
-        scores=int(parts[1])
+#         name=parts[0]
+#         scores=int(parts[1])
     
-        if scores>80:
-            print(f"Name: {name}||Runs scored: {scores}")
+#         if scores>80:
+#             print(f"Name: {name}||Runs scored: {scores}")
 
-        
-            
+with open("account.txt", "w") as f:
+    f.write("5000")
+
+with open("account.txt", "r") as f:
+    balance=int(f.read())
+    print(f'Current Balance: {balance}')
+    chiose = input("Do you want to (W)ithdrwa or (D)iposit? ").upper()
+    ammount= int(input("Enter you ammount"))
+
+    if chiose=="D":
+        balance=balance+ammount
+    elif chiose=="W":
+        if ammount<=balance:
+            balance = balance-ammount
+        else:
+            print("Insufficient Ammount !! ")
+    print(f'Updated total balance:{balance}')
+with open("account.txt", "w") as f:
+    f.write(f"Your Current Balance\n{balance}")
+
+f.close
+
 

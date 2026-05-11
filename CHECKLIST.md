@@ -30,8 +30,9 @@
 - [ ] abstraction 
 
 ## Phase 5: file i/o in python
-- [ ] writing 
-- [ ] reading 
-- [ ] append 
-- [ ] deleting  
+- [x] writing 
+- [x] reading 
+- [x] append 
+- [x] deleting  
+- [x] Serching 
 
