@@ -1,0 +1,4 @@
+Vinay
+Sham
+python -u "c:\Github\Python-Programming-Basics\tempCodeRunnerFile.py"
+python -u "c:\Github\Python-Programming-Basics\tempCodeRunnerFile.py"

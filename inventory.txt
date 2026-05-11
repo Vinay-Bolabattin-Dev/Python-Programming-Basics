@@ -1,0 +1,3 @@
+laptop:50000
+mouse:1500
+monitor:6000

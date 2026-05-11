@@ -476,32 +476,119 @@
 """ FILE 
 Input and Out """
 
-with open("log.txt", "w") as f:
-    f.write("Day 11: I am learning File I/O today ")
+# with open("log.txt", "w") as f:
+#     f.write("Day 11: I am learning File I/O today ")
 
    
 
-with open("log.txt", "a") as  f:
-    f.write("\nThis is 2nd line of m")
+# with open("log.txt", "a") as  f:
+#     f.write("\nThis is 2nd line of m")
 
-f= open("log.txt", "r")
-data=f.read()
-print(data)
+# f= open("log.txt", "r")
+# data=f.read()
+# print(data)
 
-f.close()
+# f.close()
 
-def find_word(target):
-    with open("log.txt","r") as f:
-        data=f.read()
-        if target in data:
-            print(f" {target}word Found")
-        else:
-            print(f"{target} Not found")
-        new_data=data.replace("m", "My practice or lerning ")
+# def find_word(target):
+#     with open("log.txt","r") as f:
+#         data=f.read()
+#         if target in data:
+#             print(f" {target}word Found")
+#         else:
+#             print(f"{target} Not found")
+#         new_data=data.replace("m", "My practice or lerning ")
     
-    with open("log.txt", "w") as f :
-        f.write(new_data)
-        print("File is Updated with new data ")
-        return new_data
-result=find_word("Python")
-print(result)
+#     with open("log.txt", "w") as f :
+#         f.write(new_data)
+#         print("File is Updated with new data ")
+#         return new_data
+# result=find_word("Python")
+# print(result)
+
+
+# with open("data.txt", "w") as f:
+#     f.write("10,20,30,40,50")
+
+# with open('data.txt', "r") as f:
+#     folder=f.read()
+#     print(folder)
+
+# my_list=folder.split(",")
+# print(my_list)
+
+
+# with open ("user_info.txt", 'a') as f:
+#     name= str(input("Enter your name: "))
+#     f.write(name+"\n")
+    
+# with open("user_info.txt", "r") as f:
+#     data=f.read()
+#     print(f"total Numbers of characters: {len(data)}")
+
+# with open("prices.txt", "w")as f:
+#     f.write("1500,2000,500,3000,450")
+
+# with open("prices.txt", "r") as f:
+#     rates=f.read()
+#     new_data= rates.split(",")
+#     # print(new_data)
+#     int_prices=[]
+#     for p in new_data:
+#         int_prices.append(int(p))
+#         print(p)
+#     print(f"The Highest price is:{max(int_prices)}")
+   
+# with open("inventory.txt", "w") as f:
+#     f.write("laptop:50000\nmouse:1500\nmonitor:6000")
+    
+# with open("inventory.txt", "r") as f:
+#     lines=f.readlines()
+    
+#     for line in lines:
+#         parts= line.strip().split(":")
+
+#         name=parts[0]
+#         price=int(parts[1])
+
+#         if price >2000:
+#             print(f"{name} is a premium iteam (price:{price})")
+#         else:
+#             print(f"{name} is a budget iteam (price:{price})")
+        
+      
+# with open("users.txt", "w") as f:
+#     f.write("admin:1234\nuser1:pass1\narjun:7890")
+#     user_input=input("Enter username: ")
+#     found=False
+# with open("users.txt","r") as f:
+    
+#     for line in f:
+#         parts=line.strip().split(":")
+        
+#         if parts[0]==user_input:
+#             found= True
+#             break
+# if found:
+#     print("Access Granted !!")
+# else:
+#     print("Acces not Granted!!")
+
+
+with open("scores.txt", "w") as f :
+    f.write("Rahul:45\nDeepak:82\nSagar:91\nKiran:30")
+
+with open("scores.txt", "r") as f:
+
+    for line in f:
+        parts=line.strip().split(":")
+
+        name=parts[0]
+        scores=int(parts[1])
+    
+        if scores>80:
+            print(f"Name: {name}||Runs scored: {scores}")
+
+        
+            
+
