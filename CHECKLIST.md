@@ -36,3 +36,9 @@
 - [x] deleting  
 - [x] Serching 
 
+## Phase 6 : Exception Handling 
+- [x] try 
+- [x] except
+- [x] else
+- [x] finally 
+- [x] file safety

@@ -589,15 +589,94 @@ Input and Out """
 #         if scores>80:
 #             print(f"Name: {name}||Runs scored: {scores}")
 
-with open("account.txt", "w") as f:
-    f.write("5000")
+# with open("account.txt", "w") as f:
+#     f.write("5000")
 
-with open("account.txt", "r") as f:
-    balance=int(f.read())
-    print(f'Current Balance: {balance}')
+# with open("account.txt", "r") as f:
+#     balance=int(f.read())
+#     print(f'Current Balance: {balance}')
+#     chiose = input("Do you want to (W)ithdrwa or (D)iposit? ").upper()
+#     ammount= int(input("Enter you ammount"))
+
+#     if chiose=="D":
+#         balance=balance+ammount
+#     elif chiose=="W":
+#         if ammount<=balance:
+#             balance = balance-ammount
+#         else:
+#             print("Insufficient Ammount !! ")
+#     print(f'Updated total balance:{balance}')
+# with open("account.txt", "w") as f:
+#     f.write(f"Your Current Balance\n{balance}")
+
+# f.close
+
+"""" Exception Handling 
+by using (try, except , else and finally blocks )"""
+
+# ##practice
+# try:
+#     number=int(input("Enter a number to divide 100: "))
+#     result=100/number
+#     print(f'Success!! The answers is {result}')
+
+# except ValueError:
+#     print("Logic Error: You typed a word , but i needed number!!")
+
+# except ZeroDivisionError:
+#     print("math error: you can't divide by 0!! the universe will exloade ")
+
+# print("program is still running!! it did't crash ")
+
+
+# try:
+#     a=int(input("Enter 1st num:"))
+#     b=int(input("Enter 2nd num: "))
+#     result=a/b
+#     result_wholenum=a//b
+#     print(f'Divistion of two number is:{result} in whole number:({result_wholenum})')
+
+# except ValueError:
+#     print("I need number not a characters")
+
+# except ZeroDivisionError:
+#     print("math error: you cant divide by 0 ")
+
+# finally:
+#     print("code executed ")
+
+## excpetion handling on files 
+# try:
+#     with open ('database.txt', "r") as f:
+#         pass
+# except FileNotFoundError:
+#     print("file not found!! Creating it now")
+
+#     with open("database.txt", "w") as f:
+#         f.write("this is new file")
+        
+# finally :
+#     print("file check has been completed ")
+
+
+## make ATM bullet proof by excpetion handling 
+balance=0
+try:
+    with open("account.txt", "r") as f:
+        content=f.read()
+        if content:
+            balance=int(content)
+        
+except FileNotFoundError:
+    print("File not Found or missing !! creating a new account with 5000 ")
+    balance=5000
+    with open("account.txt", "w") as f:
+        f.write(str(balance))
+try:
+    print(f'Current Balance:{balance}')
     chiose = input("Do you want to (W)ithdrwa or (D)iposit? ").upper()
     ammount= int(input("Enter you ammount"))
-
+        
     if chiose=="D":
         balance=balance+ammount
     elif chiose=="W":
@@ -605,10 +684,20 @@ with open("account.txt", "r") as f:
             balance = balance-ammount
         else:
             print("Insufficient Ammount !! ")
-    print(f'Updated total balance:{balance}')
-with open("account.txt", "w") as f:
-    f.write(f"Your Current Balance\n{balance}")
+    else:
+        print("Invalid choise!! please select w or d ")
+
+    with open("account.txt", "w") as f:
+        f.write(str(balance))
+
+        print(f"your updated balance:{balance}")
+except ValueError:
+    print("Enter number for a ammount and proper character out of (W)ithdrwa or (D)iposit at chiose")
+
+finally:
+    print("-------------------------------------------")
+    print("thank you for using ATM, Hope to see u soon")
+    print("____________________________________________")
+
 
 f.close
-
-

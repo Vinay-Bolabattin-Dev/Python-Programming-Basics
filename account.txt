@@ -1,2 +1,1 @@
-Your Current Balance
-10000
+6000
