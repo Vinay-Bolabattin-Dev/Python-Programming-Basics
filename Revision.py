@@ -713,7 +713,7 @@ class student:
     college_name="DBF college"
 
     def display(self):
-        print(f'Student name is{self.name} & roll number:{self.roll_no}')
+        print(f'Student name is {self.name} & roll number:{self.roll_no}')
 
     def check_result(self):
         if self.marks>33:
@@ -728,8 +728,23 @@ class student:
         percentage = (self.marks /total_marks)*100
         print(f"Percantage:{percentage}%")
       
+    def Full_report(self, total_marks):
+        self.display()
+        self.get_percentage(total_marks)
+        self.check_result()
+        
+        
+classroom=[
+    student("A",1,90), 
+    student("B",2,30), 
+    student("C", 3,45),
+]
+for s in classroom :
+    s.Full_report(100)
+    print("-"*20)
 
 
     
-s1=student("Vinay",45,400)
-s1.get_percentage(500)
+s
+
+
