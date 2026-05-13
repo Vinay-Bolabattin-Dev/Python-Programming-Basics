@@ -23,7 +23,8 @@
 
 ## Phase 4: OOPs (The Final Boss)
 - [ ] Classes & Objects
-- [ ] The __init__ & self
+- [ ] The __init__ & self (Constructor)
+- [ ] class and instance attributes
 - [ ] Inheritance (Next Segment)
 - [ ] Encapsulation
 - [ ] polymorphism 

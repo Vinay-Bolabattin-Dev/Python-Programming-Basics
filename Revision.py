@@ -660,44 +660,76 @@ by using (try, except , else and finally blocks )"""
 
 
 ## make ATM bullet proof by excpetion handling 
-balance=0
-try:
-    with open("account.txt", "r") as f:
-        content=f.read()
-        if content:
-            balance=int(content)
+# balance=0
+# try:
+#     with open("account.txt", "r") as f:
+#         content=f.read()
+#         if content:
+#             balance=int(content)
         
-except FileNotFoundError:
-    print("File not Found or missing !! creating a new account with 5000 ")
-    balance=5000
-    with open("account.txt", "w") as f:
-        f.write(str(balance))
-try:
-    print(f'Current Balance:{balance}')
-    chiose = input("Do you want to (W)ithdrwa or (D)iposit? ").upper()
-    ammount= int(input("Enter you ammount"))
+# except FileNotFoundError:
+#     print("File not Found or missing !! creating a new account with 5000 ")
+#     balance=5000
+#     with open("account.txt", "w") as f:
+#         f.write(str(balance))
+# try:
+#     print(f'Current Balance:{balance}')
+#     chiose = input("Do you want to (W)ithdrwa or (D)iposit? ").upper()
+#     ammount= int(input("Enter you ammount"))
         
-    if chiose=="D":
-        balance=balance+ammount
-    elif chiose=="W":
-        if ammount<=balance:
-            balance = balance-ammount
+#     if chiose=="D":
+#         balance=balance+ammount
+#     elif chiose=="W":
+#         if ammount<=balance:
+#             balance = balance-ammount
+#         else:
+#             print("Insufficient Ammount !! ")
+#     else:
+#         print("Invalid choise!! please select w or d ")
+
+#     with open("account.txt", "w") as f:
+#         f.write(str(balance))
+
+#         print(f"your updated balance:{balance}")
+# except ValueError:
+#     print("Enter number for a ammount and proper character out of (W)ithdrwa or (D)iposit at chiose")
+
+# finally:
+#     print("-------------------------------------------")
+#     print("thank you for using ATM, Hope to see u soon")
+#     print("____________________________________________")
+
+
+# f.close
+
+"""" OOPs (Object oriented programming)
+Class & Object and Contructor(__init__)"""
+
+class student:
+    def __init__(self, name , rollnumber, marks):
+        self.name=name
+        self.roll_no=rollnumber
+        self.marks=marks
+    college_name="DBF college"
+
+    def display(self):
+        print(f'Student name is{self.name} & roll number:{self.roll_no}')
+
+    def check_result(self):
+        if self.marks>33:
+            print("PASSED")
         else:
-            print("Insufficient Ammount !! ")
-    else:
-        print("Invalid choise!! please select w or d ")
+            print("Failed")
 
-    with open("account.txt", "w") as f:
-        f.write(str(balance))
+    def update_marks(self,new_marks):
+        self.marks=new_marks
 
-        print(f"your updated balance:{balance}")
-except ValueError:
-    print("Enter number for a ammount and proper character out of (W)ithdrwa or (D)iposit at chiose")
-
-finally:
-    print("-------------------------------------------")
-    print("thank you for using ATM, Hope to see u soon")
-    print("____________________________________________")
+    def get_percentage(self,total_marks):
+        percentage = (self.marks /total_marks)*100
+        print(f"Percantage:{percentage}%")
+      
 
 
-f.close
+    
+s1=student("Vinay",45,400)
+s1.get_percentage(500)
