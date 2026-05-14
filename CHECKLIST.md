@@ -25,7 +25,7 @@
 - [x] Classes & Objects
 - [x] The __init__ & self (Constructor)
 - [x] class and instance attributes
-- [ ] Inheritance (Next Segment)
+- [/] Inheritance & its types 
 - [ ] Encapsulation
 - [ ] polymorphism 
 - [ ] abstraction 
@@ -43,3 +43,9 @@
 - [x] else
 - [x] finally 
 - [x] file safety
+
+## Phase 7: Methods
+- [ ] static method
+- [ ] method overriding 
+- [ ] method overloading 
+

@@ -705,46 +705,114 @@ by using (try, except , else and finally blocks )"""
 """" OOPs (Object oriented programming)
 Class & Object and Contructor(__init__)"""
 
-class student:
-    def __init__(self, name , rollnumber, marks):
-        self.name=name
-        self.roll_no=rollnumber
-        self.marks=marks
-    college_name="DBF college"
+# class student:
+#     def __init__(self, name , rollnumber, marks):
+#         self.name=name
+#         self.roll_no=rollnumber
+#         self.marks=marks
+#     college_name="DBF college"
 
-    def display(self):
-        print(f'Student name is {self.name} & roll number:{self.roll_no}')
+#     def display(self):
+#         print(f'Student name is {self.name} & roll number:{self.roll_no}')
 
-    def check_result(self):
-        if self.marks>33:
-            print("PASSED")
-        else:
-            print("Failed")
+#     def check_result(self):
+#         if self.marks>33:
+#             print("PASSED")
+#         else:
+#             print("Failed")
 
-    def update_marks(self,new_marks):
-        self.marks=new_marks
+#     def update_marks(self,new_marks):
+#         self.marks=new_marks
 
-    def get_percentage(self,total_marks):
-        percentage = (self.marks /total_marks)*100
-        print(f"Percantage:{percentage}%")
+#     def get_percentage(self,total_marks):
+#         percentage = (self.marks /total_marks)*100
+#         print(f"Percantage:{percentage}%")
       
-    def Full_report(self, total_marks):
-        self.display()
-        self.get_percentage(total_marks)
-        self.check_result()
+#     def Full_report(self, total_marks):
+#         self.display()
+#         self.get_percentage(total_marks)
+#         self.check_result()
         
         
-classroom=[
-    student("A",1,90), 
-    student("B",2,30), 
-    student("C", 3,45),
-]
-for s in classroom :
-    s.Full_report(100)
-    print("-"*20)
+# classroom=[
+#     student("A",1,90), 
+#     student("B",2,30), 
+#     student("C", 3,45),
+# ]
+# for s in classroom :
+#     s.Full_report(100)
+#     print("-"*20)
 
 
     
-s
+# classroom[1]
 
+## Inheritance 
+""" Type mo:1 
+single inheritance """
 
+# class Animal:
+#     def __init__(self, name):
+#         self.name=name
+#         print(f"This is my animal name:{self.name}")
+    
+#     def eat(self):
+#         print(f"{self.name} is Eating....")
+
+# class Dog(Animal):
+#     def __init__(self,name):
+#         super().__init__(name)
+            
+#     def bark(self):
+#         print(f"{self.name} is barking, Woof!!")
+
+# p1=Dog("Rocky")
+# p1.eat()
+# p1.bark()
+# p2=Animal("Charly")
+# p2.eat()
+
+# class Employee:
+#     def __init__(self, name , Salary):
+#         self.name=name
+#         self.Salary=Salary
+#     def show_details(self):
+#         print(f"Employee name is {self.name} and his salary is :{self.Salary}")
+
+# class Developer(Employee):
+#     def __init__(self,name, Salary, language):
+#         super().__init__(name, Salary)
+#         self.language=language
+
+#     def show_details(self):
+#         super().show_details() #overriding 
+#         print(f"he works by using {self.language} language")
+
+# Emp1=Developer("vinay", 500000, "Python")
+# Emp1.show_details()
+
+class account :
+    def __init__(self, holder_name, balance):
+        self.holder_name=holder_name
+        self.balance=balance
+
+    def view_current_balance(self):
+        print(f"The Current Balance is {self.balance}")
+
+class Saving_Account(account):
+    def __init__(self, holder_name, balance):
+        super().__init__(holder_name, balance)
+
+    def add_intereset(self,rate):
+        if self.balance>500:
+           self.balance=self.balance*rate/100
+           print(f"Interest added,new_balance={self.balance}")
+        else:
+            print("insufficent balance for interest ")
+
+s1=Saving_Account("vinay",2000)
+s1.add_intereset(5)
+s1.view_current_balance
+
+# s2=Saving_Account("B", 10000)
+# s2.add_intereset(5)
