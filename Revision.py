@@ -791,28 +791,100 @@ single inheritance """
 # Emp1=Developer("vinay", 500000, "Python")
 # Emp1.show_details()
 
-class account :
-    def __init__(self, holder_name, balance):
-        self.holder_name=holder_name
-        self.balance=balance
+# class account :
+#     def __init__(self, holder_name, balance):
+#         self.holder_name=holder_name
+#         self.balance=balance
 
-    def view_current_balance(self):
-        print(f"The Current Balance is {self.balance}")
+#     def view_current_balance(self):
+#         print(f"The Current Balance is {self.balance}")
 
-class Saving_Account(account):
-    def __init__(self, holder_name, balance):
-        super().__init__(holder_name, balance)
+# class Saving_Account(account):
+#     def __init__(self, holder_name, balance):
+#         super().__init__(holder_name, balance)
 
-    def add_intereset(self,rate):
-        if self.balance>500:
-           self.balance=self.balance*rate/100
-           print(f"Interest added,new_balance={self.balance}")
-        else:
-            print("insufficent balance for interest ")
+#     def add_intereset(self,rate):
+#         if self.balance>500:
+#            self.balance=self.balance*rate/100
+#            print(f"Interest added,new_balance={self.balance}")
+#         else:
+#             print("insufficent balance for interest ")
 
-s1=Saving_Account("vinay",2000)
-s1.add_intereset(5)
-s1.view_current_balance
+# s1=Saving_Account("vinay",2000)
+# s1.add_intereset(5)
+# s1.view_current_balance
 
 # s2=Saving_Account("B", 10000)
 # s2.add_intereset(5)
+
+## Method Overriding in python :
+
+# class shape:
+#     def draw(self):
+#         print("Drawing a generic shape")
+
+# class cricle(shape):
+#     def draw(self):
+#         print("Drawing Cricle ")
+
+# c1=cricle()
+# c1.draw()
+
+# class emial:
+#     def __init__(self, reciver):
+#         self.reciver=reciver
+    
+#     def send(self):
+#         print(f"Email sent to {self.reciver}")
+
+# class secureEmail(emial) :
+#     def send(self):
+#         print("Ebcription enabled... ")
+#         super().send()
+
+# e1=secureEmail("vinay")
+# e1.send()
+
+## Discount system
+# class product:
+#     def __init__(self, name , price):
+#         self.name=name
+#         self.price=price
+    
+#     def display_info(self):
+#         print(f"Product name is: {self.name} its price is:{self.price}")
+
+# class discountproduct(product):
+#     def display_info(self):
+#         super().display_info()
+#         print("specal note: 10% discoount applies at checkout ")
+        
+
+# p1=discountproduct("laptop",50000)
+# p1.display_info()
+
+
+class camera:
+    def __init__(self,brand):
+        self.brand=brand
+
+    def capture(self):
+        print("Click!! photo saved!! ")
+
+
+class facedetectedcamera(camera):
+    def __init__(self, brand, face_detected):
+        self.face_dectected= face_detected
+        super().__init__(brand)
+        
+
+    def capture(self):
+        if self.face_dectected==True:
+            super().capture()
+        else:
+            print("Error: no face detected ")
+
+f1=facedetectedcamera("sony", True)
+f1.capture()
+    
+    
