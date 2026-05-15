@@ -46,6 +46,6 @@
 
 ## Phase 7: Methods
 - [ ] static method
-- [x] method overriding 
+- [x] method overriding / super()
 - [ ] method overloading 
 

@@ -864,27 +864,81 @@ single inheritance """
 # p1.display_info()
 
 
-class camera:
-    def __init__(self,brand):
-        self.brand=brand
+# class camera:
+#     def __init__(self,brand):
+#         self.brand=brand
 
-    def capture(self):
-        print("Click!! photo saved!! ")
+#     def capture(self):
+#         print("Click!! photo saved!! ")
 
 
-class facedetectedcamera(camera):
-    def __init__(self, brand, face_detected):
-        self.face_dectected= face_detected
-        super().__init__(brand)
+# class facedetectedcamera(camera):
+#     def __init__(self, brand, face_detected):
+#         self.face_dectected= face_detected
+#         super().__init__(brand)
         
 
-    def capture(self):
-        if self.face_dectected==True:
-            super().capture()
-        else:
-            print("Error: no face detected ")
+#     def capture(self):
+#         if self.face_dectected==True:
+#             super().capture()
+#         else:
+#             print("Error: no face detected ")
 
-f1=facedetectedcamera("sony", True)
-f1.capture()
+# f1=facedetectedcamera("sony", True)
+# f1.capture()
     
+    
+"""" Type no:2
+Multilevel Inheritance """
+
+# class Electronic:
+#     def __init__(self, power_type):
+#         self.power_type=power_type
+
+# class computer(Electronic):
+#     def __init__(self, power_type, ram):
+#         self.ram=ram
+#         super().__init__(power_type)
+
+# class laptop(computer):
+#     def __init__(self, power_type, ram, weight):
+#         self.weight=weight
+#         super().__init__(power_type, ram)
+    
+#     def show_spaces(self):
+#         print(f"power type: {self.power_type}, ram={self.ram} and its weight = {self.weight}")
+
+# E1=laptop("Battery", "12GB", "1.5 kg")
+# E1.show_spaces()
+
+class Game:
+    def __init__(self, title):
+        self.title=title
+    
+    def play(self):
+        print(f"Starting the Game {self.title}")
+
+class video_game(Game):
+    def __init__(self,title, platform):
+        self.platform=platform
+        super().__init__(title)
+
+    def play(self): 
+        super().play()
+        print(f"Loading Graphics for {self.platform}")       
+
+
+class Multiplayergame(video_game):
+    def __init__(self, title, platform, sever_region):
+        self.sever_region =sever_region
+        super().__init__(title,platform)
+    
+    
+    def play(self):
+        super().play()
+        print(f"Connecting to the {self.sever_region} server")
+
+f1=Multiplayergame("Free fire", "PC", "cloud")
+f1.play()
+
     
