@@ -942,38 +942,104 @@ Multilevel Inheritance """
 # f1.play()
 
     
+# class Device:
+#     def __init__(self, name):
+#         self.name=name
+
+#     def status(self):
+#         print(f"{self.name} is powered ON")
+
+# class securityDevice(Device):
+#     def __init__(self,name,is_armed):
+#         self.is_armed=is_armed
+#         super().__init__(name)
+
+#     def status(self):
+#         if self.is_armed==True:
+#             super().status()
+#             print("Security system is ACTIVE")
+#         else:
+#             print("System is  DISARMED")
+
+# class smartcamera(securityDevice):
+#     def __init__(self, name, is_armed, motion_detected):
+#         self.motion_detected=motion_detected
+#         super().__init__(name, is_armed)
+
+#     def status(self):
+#         super().status()
+#         if self.motion_detected==True:
+#             print("ALERT!!: motion detected !!")
+
+# d1=smartcamera("sony", True, True)
+# d1.status()
+
+
+# # d2=smartcamera("iphone", True, False)
+# # d2.status()
+
+# """" Type no: 3 
+# Multiple Inheitance"""
+
+# class plane:
+#     def fly(self):
+#         print("Flying in clouds ")
+
+# class boot:
+#     def swim(self):
+#         print("Sailing on water ")
+
+# class Flyingboot(plane,boot):
+#     pass
+
+# A1 = Flyingboot()
+# A1.fly()
+# A1.swim()
+
+# class clock:
+#     def __init__(self, time):
+#         self.time=time
+
+# class Health_tracker:
+#     def __init__(self,steps):
+#         self.steps=steps
+
+# class Smart_Match(clock,Health_tracker):
+#     def __init__(self,time,steps):
+#         clock.__init__(self,time) #initilize parent 1 using its class name directly 
+#         Health_tracker.__init__(self,steps) #initilize parent 2 using its class name directly 
+
+
+#     def show_info(self):
+#         print(f"Time:{self.time} & Steps:{self.steps}")
+
+
+# B1=Smart_Match(10,2000)
+# B1.show_info()
+
+"""" Diamond Pattern class 
+top=Device
+Middle left=Phone 
+Middle right= tablet
+Bottomn= Phoblet"""
+
 class Device:
-    def __init__(self, name):
-        self.name=name
+    def start(self):
+        pass
 
-    def status(self):
-        print(f"{self.name} is powered ON")
+class Phone(Device):
+    def start(self):
+        print("Phone starting")
+        
 
-class securityDevice(Device):
-    def __init__(self,name,is_armed):
-        self.is_armed=is_armed
-        super().__init__(name)
+class tablet(Device):
+    def start(self):
+        print("Tablet starting")
 
-    def status(self):
-        if self.is_armed==True:
-            super().status()
-            print("Security system is ACTIVE")
-        else:
-            print("System is  DISARMED")
+class Phoblet(Phone, tablet):
+    pass
 
-class smartcamera(securityDevice):
-    def __init__(self, name, is_armed, motion_detected):
-        self.motion_detected=motion_detected
-        super().__init__(name, is_armed)
+C1=Phoblet() ## MRO (Method Resolution Order; Python looks at the parent class from LEFT to RIGHT so out put print "Phone starting ")
+C1.start()
+print(Phoblet.mro())
 
-    def status(self):
-        super().status()
-        if self.motion_detected==True:
-            print("ALERT!!: motion detected !!")
-
-d1=smartcamera("sony", True, True)
-d1.status()
-
-
-d2=smartcamera("iphone", True, False)
-d2.status()

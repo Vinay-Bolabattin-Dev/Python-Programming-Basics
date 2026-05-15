@@ -29,6 +29,8 @@
     ## its types 
     - [x] single Inheritance
     - [x] multilevel Inheritance
+    - [x] multiple Inheritance
+    - [x] mro method (Method Resolution Order)
 - [ ] Encapsulation
 - [ ] polymorphism 
 - [ ] abstraction 
