@@ -25,7 +25,10 @@
 - [x] Classes & Objects
 - [x] The __init__ & self (Constructor)
 - [x] class and instance attributes
-- [/] Inheritance & its types 
+- [/] Inheritance 
+    ## its types 
+    - [x] single Inheritance
+    - [x] multilevel Inheritance
 - [ ] Encapsulation
 - [ ] polymorphism 
 - [ ] abstraction 

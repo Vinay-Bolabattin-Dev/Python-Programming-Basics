@@ -911,34 +911,67 @@ Multilevel Inheritance """
 # E1=laptop("Battery", "12GB", "1.5 kg")
 # E1.show_spaces()
 
-class Game:
-    def __init__(self, title):
-        self.title=title
+# class Game:
+#     def __init__(self, title):
+#         self.title=title
     
-    def play(self):
-        print(f"Starting the Game {self.title}")
+#     def play(self):
+#         print(f"Starting the Game {self.title}")
 
-class video_game(Game):
-    def __init__(self,title, platform):
-        self.platform=platform
-        super().__init__(title)
+# class video_game(Game):
+#     def __init__(self,title, platform):
+#         self.platform=platform
+#         super().__init__(title)
 
-    def play(self): 
-        super().play()
-        print(f"Loading Graphics for {self.platform}")       
+#     def play(self): 
+#         super().play()
+#         print(f"Loading Graphics for {self.platform}")       
 
 
-class Multiplayergame(video_game):
-    def __init__(self, title, platform, sever_region):
-        self.sever_region =sever_region
-        super().__init__(title,platform)
+# class Multiplayergame(video_game):
+#     def __init__(self, title, platform, sever_region):
+#         self.sever_region =sever_region
+#         super().__init__(title,platform)
     
     
-    def play(self):
-        super().play()
-        print(f"Connecting to the {self.sever_region} server")
+#     def play(self):
+#         super().play()
+#         print(f"Connecting to the {self.sever_region} server")
 
-f1=Multiplayergame("Free fire", "PC", "cloud")
-f1.play()
+# f1=Multiplayergame("Free fire", "PC", "cloud")
+# f1.play()
 
     
+class Device:
+    def __init__(self, name):
+        self.name=name
+
+    def status(self):
+        print(f"{self.name} is powered ON")
+
+class securityDevice(Device):
+    def __init__(self,name,is_armed):
+        self.is_armed=is_armed
+        super().__init__(name)
+
+    def status(self):
+        if self.is_armed==True:
+            super().status()
+            print("Security system is ACTIVE")
+        else:
+            print("System is  DISARMED")
+
+class smartcamera(securityDevice):
+    def __init__(self, name, is_armed, motion_detected):
+        self.motion_detected=motion_detected
+        super().__init__(name, is_armed)
+
+    def status(self):
+        super().status()
+        if self.motion_detected==True:
+            print("ALERT!!: motion detected !!")
+
+d1=smartcamera("sony", True, True)
+d1.status()
+
+        
