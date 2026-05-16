@@ -25,12 +25,14 @@
 - [x] Classes & Objects
 - [x] The __init__ & self (Constructor)
 - [x] class and instance attributes
-- [/] Inheritance 
+- [x] Inheritance 
     ## its types 
     - [x] single Inheritance
     - [x] multilevel Inheritance
     - [x] multiple Inheritance
     - [x] mro method (Method Resolution Order)
+    - [x] Hierarchical Inheritance
+    - [x] Hybrid Inheritance
 - [ ] Encapsulation
 - [ ] polymorphism 
 - [ ] abstraction 

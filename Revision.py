@@ -1023,23 +1023,110 @@ Middle left=Phone
 Middle right= tablet
 Bottomn= Phoblet"""
 
-class Device:
-    def start(self):
-        pass
+# class Device:
+#     def start(self):
+#         pass
 
-class Phone(Device):
-    def start(self):
-        print("Phone starting")
+# class Phone(Device):
+#     def start(self):
+#         print("Phone starting")
         
 
-class tablet(Device):
-    def start(self):
-        print("Tablet starting")
+# class tablet(Device):
+#     def start(self):
+#         print("Tablet starting")
 
-class Phoblet(Phone, tablet):
-    pass
+# class Phoblet(Phone, tablet):
+#     pass
 
-C1=Phoblet() ## MRO (Method Resolution Order; Python looks at the parent class from LEFT to RIGHT so out put print "Phone starting ")
-C1.start()
-print(Phoblet.mro())
+# C1=Phoblet() ## MRO (Method Resolution Order; Python looks at the parent class from LEFT to RIGHT so out put print "Phone starting ")
+# C1.start()
+# print(Phoblet.mro()) ## mro() method
 
+"""" Type no:4 
+Hierarchical Inheitance """
+
+# class shape:
+#     def __init__(self, color):
+#         self.color=color
+
+
+# class cricle(shape):
+#     def __init__(self, color, radius):
+#         self.radius=radius
+#         super().__init__(color)
+        
+#     def show_cricle(self):
+#         print(F"color= {self.color} & Radius= {self.radius}")
+
+# class square(shape):
+#     def __init__(self, color,side_length):
+#         self.side_length=side_length
+#         super().__init__(color)
+
+#     def show_square(self):
+#         print(f"square color= {self.color} & side length= {self.side_length}")
+
+
+# C1=cricle("Red", 12)
+# C1.show_cricle()
+
+# S1=square("Yello", 15.5)
+# S1.show_square()
+
+
+# class Account:
+#     def __init__(self,holder, balance):
+#         self.holder=holder
+#         self.balance=balance
+
+#     def calculate_interest(self):
+#         print("Generic Interest calculation ")
+
+# class saving_account(Account):
+#     def calculate_interest(self):
+#         super().calculate_interest()
+#         bonus=self.balance*0.05
+#         new_balance=self.balance+bonus
+
+#         print(f"saving interest added {new_balance}")
+
+# class current_account(Account):
+#     def calculate_interest(self):
+#         super().calculate_interest()
+#         print(f"Current Account earn 0% interest. Balance remains: {self.balance}")
+    
+
+
+# A1=saving_account('vinay', 1000)
+# A1.calculate_interest()
+
+# A2=current_account("Nilesh", 1000)
+# A2.calculate_interest()
+
+"""" Type no:5
+Hybrid Inheitance
+"""
+
+class Product:
+    def __init__(self , name , price):
+        self.name=name
+        self.price=price
+
+
+class Digital_product(Product):
+    def download(self):
+        print("Downloading file....")
+
+class Physical_prodcut(Product):
+    def ship(self):
+        print("Shipping Iteam...")
+
+class Ebook(Digital_product,Physical_prodcut):
+    def __init__(self, name, price):
+        super().__init__(name, price)
+
+
+e1=Ebook("Python masterclass", "$50")
+e1.download()
+e1.ship()
