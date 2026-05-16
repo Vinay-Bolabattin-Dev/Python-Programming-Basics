@@ -34,7 +34,12 @@
     - [x] mro method (Method Resolution Order)
     - [x] Hierarchical Inheritance
     - [x] Hybrid Inheritance
-- [ ] Encapsulation
+- [x] Encapsulation
+    ## Access Modifiers 
+    - [x]Public
+    - [x]privte
+    - [x]protected
+    - [x] Getter & Setter
 - [ ] polymorphism 
 - [ ] abstraction 
 

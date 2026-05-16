@@ -1166,15 +1166,106 @@ Hybrid Inheitance
 """" Distructor
   [ __del__ ] """
 
-class VideoProject:
-    def __init__(self, project_name):
-        self.project_name=project_name
-        print(f"Project {self.project_name} opened. loading heavy video assets...")
+# class VideoProject:
+#     def __init__(self, project_name):
+#         self.project_name=project_name
+#         print(f"Project {self.project_name} opened. loading heavy video assets...")
 
-    def __del__(self):
-        print(f"Saving changes to {self.project_name}.... Closeing files... memeory cleaned! ")
+#     def __del__(self):
+#         print(f"Saving changes to {self.project_name}.... Closeing files... memeory cleaned! ")
 
-myproject=VideoProject("instagram reel")
+# myproject=VideoProject("instagram reel")
 
-del myproject
-print(myproject)
+# del myproject
+# print(myproject)
+
+""""- ENCAPSULATION - 
+Wrapping data and methods together into a single unite
+Access Modifiers:
+-> Public :- (self.name) everyone
+-> Protected :- (self._name) Family only (class and its child classes
+->) private (self.__name) only inside the class """
+
+# class Bankacount:
+#   def __init__(self, holder_name,balance):
+#     self.holder_name=holder_name
+#     self.__balance=balance
+    
+#   def get_balance(self):
+#     return self.__balance
+  
+#   def deposite(self, amount):
+#     if amount >0:
+#       self.__balance += amount
+#     else:
+#       print("not valid ammount")
+
+
+
+# account=Bankacount("Vinay", 20000)
+# account.deposite(-10)
+# print(account.get_balance())
+# print(account._Bankacount__balance)
+
+# class SmartThermostat:
+#     def __init__(self, temperature=22):
+#         self.__temperature=temperature
+
+#     def get_temperature(self):
+#         return self.__temperature
+    
+#     def set_temperature(self, new_temp):
+#         self.new_temp=new_temp
+#         if self.new_temp in range (15,31):
+#             self.__temperature =new_temp
+#         else:
+#             print("Error: Temperature must be between 15C to 30C ")
+
+# t=SmartThermostat()
+# print(t.get_temperature())
+# t.set_temperature(25)
+# print(t.get_temperature())  
+# t.set_temperature(50)
+# print(t.get_temperature())  
+
+
+        
+##The Social Media Profile (Protected vs. Private)
+
+# class profile:
+#     def __init__(self, username="Vinay", password=12345):
+#         self._username=username
+#         self.__password=password
+
+# class Superuser(profile):
+#     def show_credentails(self):
+#         print(self._username)
+#         print(self.__password)
+
+
+# user= Superuser()
+# user.show_credentails()
+
+class employee:
+    def __init__(self, emp_id):
+        self.__emp_id=emp_id
+
+    def get_emp_id(self):
+        return self.__emp_id
+    
+    def set_emp_id(self, new_emp_id):
+        
+        id_str=str(new_emp_id)
+        if len(id_str) == 4:
+            self.__emp_id = new_emp_id
+        else:
+            print("Employee id must be 4 digits")
+
+emp= employee(1111)
+# print(emp.get_emp_id())
+# emp.set_emp_id("22222")
+# print(emp.get_emp_id())
+
+
+emp.set_emp_id(4444)        
+print(emp.get_emp_id())
