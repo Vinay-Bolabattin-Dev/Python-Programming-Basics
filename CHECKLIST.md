@@ -24,6 +24,7 @@
 ## Phase 4: OOPs (The Final Boss)
 - [x] Classes & Objects
 - [x] The __init__ & self (Constructor)
+- [x] __del__ Distructor
 - [x] class and instance attributes
 - [x] Inheritance 
     ## its types 
@@ -52,7 +53,7 @@
 - [x] file safety
 
 ## Phase 7: Methods
-- [ ] static method
+- [x] static method (Decorator)
 - [x] method overriding / super()
 - [ ] method overloading 
-
+- [x] del Keyword (Memory claen up)

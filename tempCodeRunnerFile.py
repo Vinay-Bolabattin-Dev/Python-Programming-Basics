@@ -1104,25 +1104,77 @@ Hierarchical Inheitance """
 # A2=current_account("Nilesh", 1000)
 # A2.calculate_interest()
 
-class Product:
-    def __init__(self , name , price):
-        self.name=name
-        self.price=price
+"""" Type no:5
+Hybrid Inheitance
+"""
+
+# class Product:
+#     def __init__(self , name , price):
+#         self.name=name
+#         self.price=price
 
 
-class Digital_product(Product):
-    def download(self):
-        print("Dowloading file....")
+# class Digital_product(Product):
+#     def download(self):
+#         print("Downloading file....")
 
-class Physical_prodcut(Product):
-    def ship(self):
-        print("Shipping Iteam...")
+# class Physical_prodcut(Product):
+#     def ship(self):
+#         print("Shipping Iteam...")
 
-class Ebook(Digital_product,Physical_prodcut):
-    def __init__(self, name, price):
-        super().__init__(name, price)
+# class Ebook(Digital_product,Physical_prodcut):
+#     def __init__(self, name, price):
+#         super().__init__(name, price)
 
 
-e1=Ebook("Python masterclass", "$50")
-e1.download()
-e1.ship()
+# e1=Ebook("Python masterclass", "$50")
+# e1.download()
+# e1.ship()
+
+
+## @static method
+
+# class convertor:
+#     @staticmethod ## Decortor
+#     def celsius_to_farenheit(celsius):
+#         farenheit=(celsius * 1.8)+32
+#         print(farenheit)
+    
+# convertor.celsius_to_farenheit(40)
+
+
+## del keywrod:
+
+# class Car:
+#     def __init__(self, name , brand):
+#         self.name=name
+#         self.brand=brand
+#         print(f"name={self.name} and its brand = {self.brand}")
+
+# c=Car("SUV", "TATA")
+
+# del c.name
+# # print(c.name)
+
+# del c.brand
+# # print(c.brand)
+
+# del c
+# print(c)
+
+
+"""" Distructor
+  [ __del__ ] """
+
+class VideoProject:
+    def __init__(self, project_name):
+        self.project_name=project_name
+        print(f"Project {self.project_name} opened. loading heavy video assets...")
+
+    def __del__(self):
+        print(f"Saving changes to {self.project_name}.... Closeing files... memeory cleaned! ")
+
+myproject=VideoProject("instagram reel")
+
+del myproject
+print(myproject)
