@@ -41,7 +41,7 @@
     - [x]protected
     - [x] Getter & Setter
 - [x] polymorphism 
-- [ ] abstraction 
+- [x] abstraction 
 
 ## Phase 5: file i/o in python
 - [x] writing 
