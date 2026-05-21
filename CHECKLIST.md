@@ -40,7 +40,7 @@
     - [x]privte
     - [x]protected
     - [x] Getter & Setter
-- [ ] polymorphism 
+- [x] polymorphism 
 - [ ] abstraction 
 
 ## Phase 5: file i/o in python

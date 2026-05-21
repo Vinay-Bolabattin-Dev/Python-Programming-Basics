@@ -1246,26 +1246,93 @@ Access Modifiers:
 # user= Superuser()
 # user.show_credentails()
 
-class employee:
-    def __init__(self, emp_id):
-        self.__emp_id=emp_id
+# class employee:
+#     def __init__(self, emp_id):
+#         self.__emp_id=emp_id
 
-    def get_emp_id(self):
-        return self.__emp_id
+#     def get_emp_id(self):
+#         return self.__emp_id
     
-    def set_emp_id(self, new_emp_id):
+#     def set_emp_id(self, new_emp_id):
         
-        id_str=str(new_emp_id)
-        if len(id_str) == 4:
-            self.__emp_id = new_emp_id
+#         id_str=str(new_emp_id)
+#         if len(id_str) == 4:
+#             self.__emp_id = new_emp_id
+#         else:
+#             print("Employee id must be 4 digits")
+
+# emp= employee(1111)
+# # print(emp.get_emp_id())
+# # emp.set_emp_id("22222")
+# # print(emp.get_emp_id())
+
+
+# emp.set_emp_id(4444)        
+# print(emp.get_emp_id())
+
+"""" Polymorphisum """
+
+# class car:
+#     def start_engine(self):
+#         return "Car engine purrs: Vroom vroom"
+
+# class truck:
+#     def start_engine(self):
+#         return "Truck engine roars: RUMBLE RUMBLE!"
+
+# class Electric_car:
+#     def start_engine(self):
+#         return "Electric car hums: Shhh... silent power"
+        
+# vehical = [ car(), truck() , Electric_car()]
+# for i in vehical:
+#     print(i.start_engine())
+
+# class instagramreel:
+#     def render(self):
+#         return "Rendering 9:16 vertical video with music!"
+
+# class youtube:
+#     def render(self):
+#         return "Rendering 16:9 widescreen video in 4k"
+    
+# def proccess_video(video_object):
+#     video_object=video_object
+#     print(video_object.render())
+
+# proccess_video(instagramreel())
+
+# class video:
+#    def get_aspect_ratio(self):
+#      return "Generic aspect ratio"
+    
+# class instagramreels(video):
+#    def get_aspect_ratio(self):
+#     return "9:16 (vertical)"
+   
+# class youtube(video):
+#   def get_aspect_ratio(self):
+#     return "16:9 (wisescreen)"
+  
+# v=[youtube(), instagramreels()]
+# for i in v:
+#   print(i.get_aspect_ratio())
+
+class video_editor:
+    def add_effect(self):
+        return "Appllying base color correction "
+    
+class capcut(video_editor):
+    def __init__(self, video_duration):
+        self.video_duration=video_duration
+      
+    def add_effect(self):
+        if self.video_duration <60:
+            return "Applying base color correction + Adding trending TikTok transitions!"
         else:
-            print("Employee id must be 4 digits")
-
-emp= employee(1111)
-# print(emp.get_emp_id())
-# emp.set_emp_id("22222")
-# print(emp.get_emp_id())
-
-
-emp.set_emp_id(4444)        
-print(emp.get_emp_id())
+            return "Applying base color correction + Adding standard cinematic cuts."
+  
+v1=capcut(30)
+v2=capcut(120)
+print(v1.add_effect())
+print(v2.add_effect())
