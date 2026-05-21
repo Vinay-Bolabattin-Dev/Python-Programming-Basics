@@ -1318,21 +1318,96 @@ Access Modifiers:
 # for i in v:
 #   print(i.get_aspect_ratio())
 
-class video_editor:
-    def add_effect(self):
-        return "Appllying base color correction "
+# class video_editor:
+#     def add_effect(self):
+#         return "Appllying base color correction "
     
-class capcut(video_editor):
-    def __init__(self, video_duration):
-        self.video_duration=video_duration
+# class capcut(video_editor):
+#     def __init__(self, video_duration):
+#         self.video_duration=video_duration
       
-    def add_effect(self):
-        if self.video_duration <60:
-            return "Applying base color correction + Adding trending TikTok transitions!"
-        else:
-            return "Applying base color correction + Adding standard cinematic cuts."
+#     def add_effect(self):
+#         if self.video_duration <60:
+#             return "Applying base color correction + Adding trending TikTok transitions!"
+#         else:
+#             return "Applying base color correction + Adding standard cinematic cuts."
   
-v1=capcut(30)
-v2=capcut(120)
-print(v1.add_effect())
-print(v2.add_effect())
+# v1=capcut(30)
+# v2=capcut(120)
+# print(v1.add_effect())
+# print(v2.add_effect())
+
+"""" Abstraction """
+
+# from abc import ABC , abstractmethod
+# class Vehical(ABC):
+#     @abstractmethod
+#     def start_engine(self):
+#         pass 
+
+# class car(Vehical):
+#     def start_engine(self):
+#         return "car started successfully !!"
+   
+# c=car()
+# print(c.start_engine())
+
+# from abc import ABC , abstractmethod
+# class videoExporter(ABC):
+#     @abstractmethod
+#     def export_video(self):
+#         pass
+
+# class ReelExporter(videoExporter):
+#     def export_video(self):
+#         return "Exportting an vertical 1080x1920 MPA.."
+    
+# class YouTube(videoExporter):
+#     def export_video(self):
+#         return "Exporting as widescreen 4k MOV..."
+
+# Editing1=ReelExporter()
+# Editing2=YouTube()
+# print(Editing1.export_video())
+# print(Editing2.export_video())
+
+# #just checking abstract carsh
+# E=videoExporter()
+# print(E.export_video())
+
+
+from abc import ABC, abstractmethod
+class PremiumFeatures(ABC):
+    def __init__(self, features_name):
+        self.features_name=features_name
+    
+    @abstractmethod
+    def apply_features(self):
+        pass
+
+    @abstractmethod
+    def get_required_tier(self):
+        pass
+
+class AIChromaKey(PremiumFeatures):
+    def apply_features(self):
+        return "Removing background cleanly using AI Green Screen!"
+    
+    def get_required_tier(self):
+        return "Pro"
+    
+class BasicFilters(PremiumFeatures):
+    def apply_features(self):
+        return "Applying standard cinematic filter."
+    
+    def get_required_tier(self):
+        return "Free"
+    
+user1=AIChromaKey("color grading")
+user2=BasicFilters("Effects")
+
+print(user1.apply_features())
+print(user1.get_required_tier())
+
+print(user2.apply_features())
+print(user2.get_required_tier())
