@@ -56,6 +56,7 @@
 - [x] else
 - [x] finally 
 - [x] file safety
+- [x] raise
 
 ## Phase 7: Methods
 - [x] static method (Decorator)

@@ -1376,38 +1376,100 @@ Access Modifiers:
 # print(E.export_video())
 
 
-from abc import ABC, abstractmethod
-class PremiumFeatures(ABC):
-    def __init__(self, features_name):
-        self.features_name=features_name
+# from abc import ABC, abstractmethod
+# class PremiumFeatures(ABC):
+#     def __init__(self, features_name):
+#         self.features_name=features_name
     
-    @abstractmethod
-    def apply_features(self):
-        pass
+#     @abstractmethod
+#     def apply_features(self):
+#         pass
 
-    @abstractmethod
-    def get_required_tier(self):
-        pass
+#     @abstractmethod
+#     def get_required_tier(self):
+#         pass
 
-class AIChromaKey(PremiumFeatures):
-    def apply_features(self):
-        return "Removing background cleanly using AI Green Screen!"
+# class AIChromaKey(PremiumFeatures):
+#     def apply_features(self):
+#         return "Removing background cleanly using AI Green Screen!"
     
-    def get_required_tier(self):
-        return "Pro"
+#     def get_required_tier(self):
+#         return "Pro"
     
-class BasicFilters(PremiumFeatures):
-    def apply_features(self):
-        return "Applying standard cinematic filter."
+# class BasicFilters(PremiumFeatures):
+#     def apply_features(self):
+#         return "Applying standard cinematic filter."
     
-    def get_required_tier(self):
-        return "Free"
+#     def get_required_tier(self):
+#         return "Free"
     
-user1=AIChromaKey("color grading")
-user2=BasicFilters("Effects")
+# user1=AIChromaKey("color grading")
+# user2=BasicFilters("Effects")
 
-print(user1.apply_features())
-print(user1.get_required_tier())
+# print(user1.apply_features())
+# print(user1.get_required_tier())
 
-print(user2.apply_features())
-print(user2.get_required_tier())
+# print(user2.apply_features())
+# print(user2.get_required_tier())
+
+""" OOP reacap challenge """
+# from abc import ABC , abstractmethod
+# class videojob(ABC):
+#     @abstractmethod
+#     def process(self):
+#         pass
+
+# class ReelJob(videojob):
+#     def __init__(self, file_size):
+#         self.__file_size=file_size
+
+#     def get(self):
+#         return self.__file_size
+    
+    
+#     def process(self):
+#         return "Proccesing 9:16 vetical reel..!"
+    
+# video =ReelJob("50 MB")
+# print(video.process())
+# print(video.get())
+
+
+""" final Expection/Error handling challeges"""
+
+# video_duration=30
+# video_duration=0
+
+# try:
+#     render_speed=100/video_duration
+
+# except ZeroDivisionError:
+#     print("Error: Duration can not be 0 secounds ")
+
+# else:
+#     print("Render successful !! Speed score caculated ")
+
+# finally:
+#     print("Closing rendering engine claering temporary cache")
+
+
+""" raise keyword in exception handling """
+
+export_fps = int(input("Enter a export_fps: "))
+
+try:
+    if export_fps > 60:
+        raise ValueError("CapCut only supports up to 60 Fps for Instagram reels!!")
+    else:
+        print("Fps setting verified !!")
+
+except ValueError as e :
+    print(e)
+
+finally :
+    print('Export configuration complete')
+     
+
+
+
+
