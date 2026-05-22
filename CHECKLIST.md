@@ -63,3 +63,7 @@
 - [x] method overriding / super()
 - [ ] method overloading 
 - [x] del Keyword (Memory claen up)
+
+## Advance Phase: 
+- [x] Advance Excpetion handling 
+- [ ] Advance file handling (.txt, .jpng)
