@@ -65,5 +65,7 @@
 - [x] del Keyword (Memory claen up)
 
 ## Advance Phase: 
-- [x] Advance Excpetion handling 
-- [ ] Advance file handling (.txt, .jpng)
+- [x] Advance Exception handling
+- [ ] OOP Polish (Dunder methods & @property)
+- [ ] Advance file handling (.txt, .json)
+- [ ] Modules & Packages (Importing code)
