@@ -20,7 +20,8 @@
 - [x] types of  functions
 - [ ] Recurstions
 
-
+________________________________________________________________________
+========================================================================
 ## Phase 4: OOPs (The Final Boss)
 - [x] Classes & Objects
 - [x] The __init__ & self (Constructor)
@@ -42,6 +43,14 @@
     - [x] Getter & Setter
 - [x] polymorphism 
 - [x] abstraction 
+
+## OOP Polish & Mastery:
+- [ ] Dunder Methods (`__str__`, `__repr__`) - Custom object printing
+- [ ] Operator Overloading - Making objects work with math operators (e.g., + or ==)
+- [ ] @property Decorator - Advanced encapsulation (clean getters/setters)
+- [ ] @classmethod & @staticmethod - Methods belonging to the class itself
+-------------------------------------------------------------------------------------
+=====================================================================================
 
 ## Phase 5: file i/o in python
 - [x] writing 
