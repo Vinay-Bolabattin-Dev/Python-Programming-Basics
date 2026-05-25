@@ -75,6 +75,9 @@ ________________________________________________________________________
 
 ## Advance Phase: 
 - [x] Advance Exception handling
-- [ ] OOP Polish (Dunder methods & @property)
+- [x] OOP Polish (Dunder methods & @property)
+   - [x] twin printing method ( __str__ & __repr__)
+   - [x] math &operator magic method (__add__ / __sub__)
+   - [x] lifecycle magic method ( __len__ )
 - [ ] Advance file handling (.txt, .json)
 - [ ] Modules & Packages (Importing code)
