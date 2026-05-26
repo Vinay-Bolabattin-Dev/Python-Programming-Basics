@@ -79,5 +79,7 @@ ________________________________________________________________________
    - [x] twin printing method ( __str__ & __repr__)
    - [x] math &operator magic method (__add__ / __sub__)
    - [x] lifecycle magic method ( __len__ )
-- [ ] Advance file handling (.txt, .json)
+- [/] Advance file handling 
+   - [x] writing  (.json files ) using  json.dump()
+   - [] reading  (.json files ) using json.load()
 - [ ] Modules & Packages (Importing code)

@@ -51,7 +51,7 @@ raise keyword in exception handling
 
 """
 =============================================
-     OOP Polish: Magic/Dunder Methods (__str__, __repr__)
+     OOP Polish: Magic/Dunder Methods (__str__, __repr__ , __add__ ,__len__ )
 =============================================
 """
 ##Easy level example
@@ -179,4 +179,83 @@ raise keyword in exception handling
     
 # my_playlist=capcutplaylist("Intro")
 # print(len(my_playlist))
+      
+"""
+=============================================
+   Advance file handling (.txt, .json)
+=============================================
+"""
+""" writing json.file by using json.dump"""
+### Easy level ex:
+# import json
+
+# video_configure={
+#     "resolution": "1080p",
+#     "fps": 60,
+#     "audio_enhanced": True,
+
+# }
+
+# with open("project_settings.json", "w") as file :
+#     json.dump(video_configure, file , indent=4)
+
+##Medium level ex
+
+# import json
+
+# instagram_profile ={
+#     "username" : "capcut_editor_01",
+#     "metrics":{
+#         "followers":12500,
+#         "total_reels":45,
+#     },
+    
+#     "verfied": False,
+
+# }
+
+# with open("profile_data.json", "w") as file:
+#     json.dump(instagram_profile, file , indent=4)
+
+## Hard level Example : 
+# import  json
+
+# workspace={
+#     "list updated": "2026-05-26",
+#     "projects":[
+#         {
+#             "title":"IPL Reel",
+#             "exported": True,
+#         },
+#         {
+#             "title":"Mi shorts",
+#             "exported": False,
+#         }     
+#     ]
+# }
+
+# with open("workspace_backup.json","w" ) as file:
+#     json.dump(workspace, file , indent=4)
+
+""" Reading json file / json.load"""
+# import json
+# with open("project_settings.json", "r") as file:
+#     config=json.load(file)
+
+# print(config)
+# print(config["audio_enhanced"])
+
+# import json
+# with open("profile_data.json", "r") as file:
+#     profile=json.load(file)
+
+# print(profile["metrics"] ["followers"])
+
+
+import json
+with open("workspace_backup.json", "r") as file:
+    work_space_data=json.load(file)
+    for project in work_space_data["projects"]:
+        print(project["title"])
         
+
