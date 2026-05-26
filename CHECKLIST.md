@@ -82,5 +82,5 @@ ________________________________________________________________________
 - [/] Advance file handling 
    - [x] writing  (.json files ) using  json.dump()
    - [x] reading  (.json files ) using json.load()
-   - [] Binary file handling 
+   - [x] Binary file handling 
 - [ ] Modules & Packages (Importing code)
