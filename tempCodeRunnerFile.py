@@ -252,10 +252,64 @@ raise keyword in exception handling
 # print(profile["metrics"] ["followers"])
 
 
-import json
-with open("workspace_backup.json", "r") as file:
-    work_space_data=json.load(file)
-    for project in work_space_data["projects"]:
-        print(project["title"])
+# import json
+# with open("workspace_backup.json", "r") as file:
+#     work_space_data=json.load(file)
+#     for project in work_space_data["projects"]:
+#         print(project["title"])
         
 
+"""
+-----------------------------------------------------------
+|  Binary File Handling (.mp4 , .png , .jpng , .mp3 )     |
+-----------------------------------------------------------
+"""
+## Easy level
+# fake_bites=b'Fake image data stream' # b before quotes that tells python as a binary data 
+
+# with open("fake_bites.png", "wb") as source :
+#     source.write(fake_bites)
+
+# with open("fake_bites.png", "rb") as view:
+#     output=view.read()
+#     print(output)
+
+## Medium level 
+
+# with open("bappa.jpeg", "rb") as images:
+#     assent_bytes=images.read()
+#     print(assent_bytes)
+
+# with open("bappa_backup.jpeng", "wb") as backup:
+#     backup.write(assent_bytes)
+
+## Hard level 
+# downloaded_data=b'\x89PNG\x00\x11\x22RawImageDataHere'
+# if downloaded_data.startswith(b'\x89PNG'):
+#     print("Valid PNG asset detected")
+# else:
+#     print("Currupted or unkown file foramt")
+
+"""
+===========================================
+ Example by using data from hard drive
+===========================================
+"""
+# import os 
+# location =r"D:\Wallpaper\bappa.jpeg"
+# if os.path.exists(location):
+#     with open(location, "rb") as image:
+#         print("File loaded successfully!")
+# else:
+#     print(f"Error:{location} bappa.jpeg is missing from this directory!")
+
+import os
+
+video_path= r"D:\Songs\Latest songs\1 pal pal del ke pas.mp4"
+
+if os.path.exists(video_path):
+    with open(video_path,"rb") as video:
+        print("video found and loaded!!")
+
+else:
+    print(f"Warning !! {video_path } is still missing ")

@@ -81,5 +81,6 @@ ________________________________________________________________________
    - [x] lifecycle magic method ( __len__ )
 - [/] Advance file handling 
    - [x] writing  (.json files ) using  json.dump()
-   - [] reading  (.json files ) using json.load()
+   - [x] reading  (.json files ) using json.load()
+   - [] Binary file handling 
 - [ ] Modules & Packages (Importing code)
