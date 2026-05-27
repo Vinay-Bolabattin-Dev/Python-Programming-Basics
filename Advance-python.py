@@ -303,13 +303,28 @@ raise keyword in exception handling
 # else:
 #     print(f"Error:{location} bappa.jpeg is missing from this directory!")
 
-import os
+# import os
 
-video_path= r"D:\Songs\Latest songs\1 pal pal del ke pas.mp4"
+# video_path= r"D:\Songs\Latest songs\1 pal pal del ke pas.mp4"
 
-if os.path.exists(video_path):
-    with open(video_path,"rb") as video:
-        print("video found and loaded!!")
+# if os.path.exists(video_path):
+#     with open(video_path,"rb") as video:
+#         print("video found and loaded!!")
 
+# else:
+#     print(f"Warning !! {video_path } is still missing ")
+
+import os 
+orginal_clip= r"D:\Wallpaper\peakpx.jpeg"
+
+if os.path.exists(orginal_clip):
+   with open(orginal_clip, "rb") as images:
+      raw_bytes=images.read()
+
+   with open (r"D:\Wallpaper\peakpx_backup.jpeg", "wb" ) as source:
+      source.write(raw_bytes)
+      print("Asset verified and successfully cloned! ")
+      
 else:
-    print(f"Warning !! {video_path } is still missing ")
+   print(f"Warning: Source asset could not be found at that location!")
+

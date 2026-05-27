@@ -45,7 +45,7 @@ ________________________________________________________________________
 - [x] abstraction 
 
 ## OOP Polish & Mastery:
-- [ ] Dunder Methods (`__str__`, `__repr__`) - Custom object printing
+- [x] Dunder Methods (`__str__`, `__repr__`) - Custom object printing
 - [ ] Operator Overloading - Making objects work with math operators (e.g., + or ==)
 - [ ] @property Decorator - Advanced encapsulation (clean getters/setters)
 - [ ] @classmethod & @staticmethod - Methods belonging to the class itself
@@ -70,7 +70,7 @@ ________________________________________________________________________
 ## Phase 7: Methods
 - [x] static method (Decorator)
 - [x] method overriding / super()
-- [ ] method overloading 
+- [x] method overloading 
 - [x] del Keyword (Memory claen up)
 
 ## Advance Phase: 
@@ -79,7 +79,7 @@ ________________________________________________________________________
    - [x] twin printing method ( __str__ & __repr__)
    - [x] math &operator magic method (__add__ / __sub__)
    - [x] lifecycle magic method ( __len__ )
-- [/] Advance file handling 
+- [x] Advance file handling 
    - [x] writing  (.json files ) using  json.dump()
    - [x] reading  (.json files ) using json.load()
    - [x] Binary file handling 

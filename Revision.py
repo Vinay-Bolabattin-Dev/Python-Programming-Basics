@@ -1434,6 +1434,31 @@ Access Modifiers:
 # print(video.process())
 # print(video.get())
 
+""" Method Overloading """
+class DataFormatter:
+    
 
+    def format_data(self, data, heading =None):
+        self.data=data
+        self.heading = heading
+        if type(data) == str:
+            print(f"[{heading}] [{data.upper()}]") 
+        elif type(data)== list:
+            print("--- Loop Iteam ---")
+            for iteam in data:
+                print(f"*{iteam}")
+        elif type(data)== dict:
+            print("----Configuration---")
+            for key,value in data.items():
+                print(f"{key}:{value}")
+
+formatter=DataFormatter()
+
+formatter.format_data("render complete", heading="CAPCUT")
+formatter.format_data(["Apply LUT", "Trim Audio", "Export 4K"])
+formatter.format_data({"Resolution": "1080p", "FPS": 60})
+        
+        
+        
 
 
