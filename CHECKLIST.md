@@ -44,13 +44,7 @@ ________________________________________________________________________
 - [x] polymorphism 
 - [x] abstraction 
 
-## OOP Polish & Mastery:
-- [x] Dunder Methods (`__str__`, `__repr__`) - Custom object printing
-- [ ] Operator Overloading - Making objects work with math operators (e.g., + or ==)
-- [ ] @property Decorator - Advanced encapsulation (clean getters/setters)
-- [ ] @classmethod & @staticmethod - Methods belonging to the class itself
--------------------------------------------------------------------------------------
-=====================================================================================
+=============================================================================
 
 ## Phase 5: file i/o in python
 - [x] writing 
@@ -72,7 +66,7 @@ ________________________________________________________________________
 - [x] method overriding / super()
 - [x] method overloading 
 - [x] del Keyword (Memory claen up)
-
+-----------------------------------------------------------------------
 ## Advance Phase: 
 - [x] Advance Exception handling
 - [x] OOP Polish (Dunder methods & @property)
