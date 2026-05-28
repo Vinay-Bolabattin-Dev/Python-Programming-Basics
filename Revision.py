@@ -1435,30 +1435,84 @@ Access Modifiers:
 # print(video.get())
 
 """ Method Overloading """
-class DataFormatter:
+# class DataFormatter:
     
 
-    def format_data(self, data, heading =None):
-        self.data=data
-        self.heading = heading
-        if type(data) == str:
-            print(f"[{heading}] [{data.upper()}]") 
-        elif type(data)== list:
-            print("--- Loop Iteam ---")
-            for iteam in data:
-                print(f"*{iteam}")
-        elif type(data)== dict:
-            print("----Configuration---")
-            for key,value in data.items():
-                print(f"{key}:{value}")
+#     def format_data(self, data, heading =None):
+#         self.data=data
+#         self.heading = heading
+#         if type(data) == str:
+#             print(f"[{heading}] [{data.upper()}]") 
+#         elif type(data)== list:
+#             print("--- Loop Iteam ---")
+#             for iteam in data:
+#                 print(f"*{iteam}")
+#         elif type(data)== dict:
+#             print("----Configuration---")
+#             for key,value in data.items():
+#                 print(f"{key}:{value}")
 
-formatter=DataFormatter()
+# formatter=DataFormatter()
 
-formatter.format_data("render complete", heading="CAPCUT")
-formatter.format_data(["Apply LUT", "Trim Audio", "Export 4K"])
-formatter.format_data({"Resolution": "1080p", "FPS": 60})
+# formatter.format_data("render complete", heading="CAPCUT")
+# formatter.format_data(["Apply LUT", "Trim Audio", "Export 4K"])
+# formatter.format_data({"Resolution": "1080p", "FPS": 60})
         
         
         
+""" @classmethod  & @static method"""
+
+# class Smartphone:
+#     brand = "Motorola"  
+#     def __init__(self, model_name):
+#         self.model = model_name  
+
+#     def get_details(self):
+#         return f"{self.brand} {self.model}"
+
+#     # 2. Class Method (The Manager)
+#     @classmethod
+#     def update_brand(cls, new_brand):
+#         cls.brand = new_brand  # 🎯 Updates the brand for ALL phones globally
+
+#     # 3. Static Method (The Calculator)
+#     @staticmethod
+#     def is_5g_supported(band_count):
+#         return band_count > 5  # 🎯 Just checks a number, completely isolated
+    
+# phone1=Smartphone("G64 5G")
+# print(phone1.get_details())
+
+# print(f'{Smartphone.is_5g_supported(14)}')
+
+# Smartphone.update_brand("Moto Pro")
+# print(phone1.get_details())
+
+class reel_tracker:
+    total_system_views= 0
+    def __init__(self, title , views):
+        self.title = title
+        self.views=views
+        reel_tracker.total_system_views +=views
+
+    def get_video_status(self):
+        return f"{self.title} & {self.views}"
+    
+    @classmethod
+    def get_system_report(cls):
+        return cls.total_system_views
 
 
+    @staticmethod
+    def check_viral_status(views):
+        return views>10000
+    
+video1=reel_tracker("home shiftting ", 120000)
+print(video1.get_video_status()) # instance method
+
+print(reel_tracker.get_system_report()) # class method
+
+print(reel_tracker.check_viral_status(12000))
+
+
+        
