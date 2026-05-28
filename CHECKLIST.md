@@ -66,6 +66,7 @@ ________________________________________________________________________
 - [x] method overriding / super()
 - [x] method overloading 
 - [x] del Keyword (Memory claen up)
+- [x] @classmethod and @staticmethod
 -----------------------------------------------------------------------
 ## Advance Phase: 
 - [x] Advance Exception handling
