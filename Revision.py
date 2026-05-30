@@ -1488,31 +1488,42 @@ Access Modifiers:
 # Smartphone.update_brand("Moto Pro")
 # print(phone1.get_details())
 
-class reel_tracker:
-    total_system_views= 0
-    def __init__(self, title , views):
-        self.title = title
-        self.views=views
-        reel_tracker.total_system_views +=views
+# class reel_tracker:
+#     total_system_views= 0
+#     def __init__(self, title , views):
+#         self.title = title
+#         self.views=views
+#         reel_tracker.total_system_views +=views
 
-    def get_video_status(self):
-        return f"{self.title} & {self.views}"
+#     def get_video_status(self):
+#         return f"{self.title} & {self.views}"
     
-    @classmethod
-    def get_system_report(cls):
-        return cls.total_system_views
+#     @classmethod
+#     def get_system_report(cls):
+#         return cls.total_system_views
 
 
-    @staticmethod
-    def check_viral_status(views):
-        return views>10000
+#     @staticmethod
+#     def check_viral_status(views):
+#         return views>10000
     
-video1=reel_tracker("home shiftting ", 120000)
-print(video1.get_video_status()) # instance method
+# video1=reel_tracker("home shiftting ", 120000)
+# print(video1.get_video_status()) # instance method
 
-print(reel_tracker.get_system_report()) # class method
+# print(reel_tracker.get_system_report()) # class method
 
-print(reel_tracker.check_viral_status(12000))
+# print(reel_tracker.check_viral_status(12000))
 
+## just simple practice in relocation period 
+class user:
+    def __init__(self,name , location ):
+        self.name = name 
+        self.location =location 
+    
+    def show_details(self):
+        return f'user name is:{self.name} and located at: {self.location}'
+    
+user1 = user('Vinay', "solapur")
+print(user1.show_details())
 
         
