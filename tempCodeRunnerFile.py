@@ -28,10 +28,19 @@
 
 ## 1.3 
 
-def count_elements(my_list):
-    if my_list==[]:
-        return 0
-    return 1+count_elements(my_list[1:])
+# def count_elements(my_list):
+#     if my_list==[]:
+#         return 0
+#     return 1+count_elements(my_list[1:])
 
-iteams = count_elements([10,20,30,40])
-print(iteams)
+# iteams = count_elements([10,20,30,40])
+# print(iteams)
+
+
+def multiply_all(my_list):
+    if my_list ==[]:
+        return 1
+    return my_list[0] * multiply_all(my_list[1: ])
+
+num=multiply_all([2, 3, 5])
+print(num)
