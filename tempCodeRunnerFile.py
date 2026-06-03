@@ -37,10 +37,37 @@
 # print(iteams)
 
 
-def multiply_all(my_list):
-    if my_list ==[]:
-        return 1
-    return my_list[0] * multiply_all(my_list[1: ])
+# def multiply_all(my_list):
+#     if my_list ==[]:
+#         return 1
+#     return my_list[0] * multiply_all(my_list[1: ])
 
-num=multiply_all([2, 3, 5])
-print(num)
+# num=multiply_all([2, 3, 5])
+# print(num)
+
+
+# def count_letters(my_string):
+#     if my_string == "":
+#         return 0 
+    
+#     return 1 + count_letters(my_string[1:])
+
+# result=count_letters("hi")
+# print(result)
+    
+def count_zoos(mystring):
+    if mystring == "":
+        return 0
+    if mystring[0] == "z":
+        return 1+count_zoos(mystring[1:])
+    else:
+        return 0+count_zoos(mystring[1:])
+    
+letter=count_zoos("zigzag")
+print(letter)
+letter=count_zoos("Zigzag")
+print(letter)
+letter=count_zoos("zzzzzzzigzag")
+print(letter)
+letter=count_zoos("oooooohhhh")
+print(letter)
