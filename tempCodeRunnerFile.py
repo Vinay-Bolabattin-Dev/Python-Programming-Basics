@@ -55,19 +55,30 @@
 # result=count_letters("hi")
 # print(result)
     
-def count_zoos(mystring):
-    if mystring == "":
-        return 0
-    if mystring[0] == "z":
-        return 1+count_zoos(mystring[1:])
-    else:
-        return 0+count_zoos(mystring[1:])
+# def count_zoos(mystring):
+#     if mystring == "":
+#         return 0
+#     if mystring[0] == "z":
+#         return 1+count_zoos(mystring[1:])
+#     else:
+#         return 0+count_zoos(mystring[1:])
     
-letter=count_zoos("zigzag")
-print(letter)
-letter=count_zoos("Zigzag")
-print(letter)
-letter=count_zoos("zzzzzzzigzag")
-print(letter)
-letter=count_zoos("oooooohhhh")
-print(letter)
+# letter=count_zoos("zigzag")
+# print(letter)
+# letter=count_zoos("Zigzag")
+# print(letter)
+# letter=count_zoos("zzzzzzzigzag")
+# print(letter)
+# letter=count_zoos("oooooohhhh")
+# print(letter)
+
+def remove_space(my_string):
+    if my_string== "":
+        return ""
+    if my_string[0] ==" ":
+        return remove_space(my_string[1: ])
+    else:
+        return my_string[0] + remove_space(my_string[1:])
+    
+string = remove_space( "v i n a y") 
+print(string)
