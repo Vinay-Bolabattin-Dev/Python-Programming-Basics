@@ -72,13 +72,35 @@
 # letter=count_zoos("oooooohhhh")
 # print(letter)
 
-def remove_space(my_string):
-    if my_string== "":
-        return ""
-    if my_string[0] ==" ":
-        return remove_space(my_string[1: ])
-    else:
-        return my_string[0] + remove_space(my_string[1:])
+# def remove_space(my_string):
+#     if my_string== "":
+#         return ""
+#     if my_string[0] ==" ":
+#         return remove_space(my_string[1: ])
+#     else:
+#         return my_string[0] + remove_space(my_string[1:])
     
-string = remove_space( "v i n a y") 
-print(string)
+# string = remove_space( "v i n a y") 
+# print(string)
+
+## searching in list using recurstion 
+# def is_item_in_list(my_list , target):
+#     if target in my_list:
+#         return True
+#     else:
+#         return False
+# print(is_item_in_list([10,20,30,40], 20)) 
+
+def is_item_in_list(mylist, target):
+    if mylist== []:
+        return False
+    
+    if mylist[0]==target:
+        return True
+    else:
+        return is_item_in_list(mylist[1:], target)
+    
+
+print(is_item_in_list([10,20,30,40], 20))
+print(is_item_in_list([10,20,30,40], 90))
+    
