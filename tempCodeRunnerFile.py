@@ -91,16 +91,66 @@
 #         return False
 # print(is_item_in_list([10,20,30,40], 20)) 
 
-def is_item_in_list(mylist, target):
-    if mylist== []:
-        return False
+# def is_item_in_list(mylist, target):
+#     if mylist== []:
+#         return False
     
-    if mylist[0]==target:
-        return True
-    else:
-        return is_item_in_list(mylist[1:], target)
+#     if mylist[0]==target:
+#         return True
+#     else:
+#         return is_item_in_list(mylist[1:], target)
     
 
-print(is_item_in_list([10,20,30,40], 20))
-print(is_item_in_list([10,20,30,40], 90))
+# print(is_item_in_list([10,20,30,40], 20))
+# print(is_item_in_list([10,20,30,40], 90))
     
+# def divide_list(my_list):
+
+#     if len(my_list) <=1:
+#         return my_list
+    
+#     mid = len(my_list) //2
+#     left = my_list[ :mid]
+#     right=my_list[mid:]
+
+#     print(f"splitting: left ={left}, right={right}")
+
+#     divide_list(left)
+#     divide_list(right)
+
+
+# number= divide_list([10,11,12,13,14,15,16])
+
+
+# def count_spliting(my_list):
+#     if len(my_list)<=1:
+#         return 0
+    
+
+#     mid =len(my_list) //2
+#     left = (my_list)[:mid]
+#     right=(my_list)[mid: ] 
+
+
+#     return 1 + count_spliting(left) + count_spliting(right)
+
+# total_value=count_spliting([10,11,12,13,14,15,16])
+# print(f'total splite {total_value}')
+    
+
+def count_dacteria(hours):
+    if hours==0:
+        return 1
+    
+    if hours >0:
+       return  2 * count_dacteria(hours-1)
+    
+    
+    
+print(count_dacteria(5))
+
+
+
+
+    
+
