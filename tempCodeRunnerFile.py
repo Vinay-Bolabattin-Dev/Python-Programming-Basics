@@ -138,19 +138,57 @@
 # print(f'total splite {total_value}')
     
 
-def count_dacteria(hours):
-    if hours==0:
-        return 1
+# def count_dacteria(hours):
+#     if hours==0:
+#         return 1
     
-    if hours >0:
-       return  2 * count_dacteria(hours-1)
+#     if hours >0:
+#        return  2 * count_dacteria(hours-1)
     
     
     
-print(count_dacteria(5))
+# print(count_dacteria(5))
 
 
-
-
+# def count_steps_taken(total_steps):
+#     if total_steps == 0:
+#         return 0
     
+#     return 
 
+
+# def has_character(my_string, target):
+
+#     if my_string== "":
+#         return False
+    
+#     if my_string[0]==target:
+#         return True
+#     else:
+#        return has_character(my_string[1:], target)
+
+# print(has_character("vinay", "a"))  # Should print True
+# print(has_character("solapur", "z")) # Should print False
+
+# def has_vowel(mystring, target=['a','e','i','o','u']):
+#     if mystring== "":
+#         return False
+    
+#     if mystring[0] in target :
+#         return True
+#     else:
+#         return has_vowel(mystring[1:])
+    
+# print(has_vowel("rhythm"))  # Should print False
+# print(has_vowel("solapur")) # Should print True
+
+def count_evens(mylist):
+    if mylist== []:
+        return 0
+    
+    if mylist[0] % 2==0:
+        return 1 + count_evens(mylist[1: ])
+    else:
+        return count_evens(mylist[1:])
+print(count_evens([2, 5, 4, 7, 8]))  # Should print 3 (because 2, 4, and 8 are even)
+print(count_evens([1, 3, 5, 7, 9]))  # Should print 0
