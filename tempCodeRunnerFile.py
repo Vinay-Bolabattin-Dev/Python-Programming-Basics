@@ -182,13 +182,77 @@
 # print(has_vowel("rhythm"))  # Should print False
 # print(has_vowel("solapur")) # Should print True
 
-def count_evens(mylist):
-    if mylist== []:
-        return 0
+# def count_evens(mylist):
+#     if mylist== []:
+#         return 0
     
-    if mylist[0] % 2==0:
-        return 1 + count_evens(mylist[1: ])
+#     if mylist[0] % 2==0:
+#         return 1 + count_evens(mylist[1: ])
+#     else:
+#         return count_evens(mylist[1:])
+# print(count_evens([2, 5, 4, 7, 8]))  # Should print 3 (because 2, 4, and 8 are even)
+# print(count_evens([1, 3, 5, 7, 9]))  # Should print 0
+
+# def Divide_list(mylist):
+#     if len(mylist) <=1:
+#         return mylist
+
+#     mid = len(mylist) //2
+
+#     left_half= mylist[ :mid]
+#     right_half=mylist[mid: ]
+
+#     print(f"Spliting: left half= {left_half} & Right half = {right_half}")
+
+#     Divide_list(left_half)
+#     Divide_list(right_half)
+
+# Divide_list([38, 27, 43, 3])
+
+# def replace_spaces(my_string):
+#     if my_string== "":
+#         return ""
+    
+#     if my_string[0]==" ":
+#         return "-" + replace_spaces(my_string[1: ])
+#     else: 
+#         return my_string[0] + replace_spaces(my_string[1: ])
+# print(replace_spaces("v i n a y"))  # Should print "v-i-n-a-y"
+# print(replace_spaces("solapur city")) # Should print "solapur-city"
+
+
+# def add_exclamation(my_string):
+#     if my_string=="":
+#         return ""
+    
+#     if my_string[0] =='a':
+#         return "a!" + add_exclamation(my_string[1: ])
+#     else:
+#         return my_string[0] + add_exclamation(my_string[1: ])
+    
+# print(add_exclamation("vinay")) # Should print "vina!y"
+# print(add_exclamation("banana")) # Should print "ba!na!na!"
+
+# def remove_x(my_string):
+#     if my_string=="":
+#         return ""
+    
+#     if my_string[0]=='x':
+#         return '' + remove_x(my_string[1: ])
+#     else:
+#         return my_string[0] + remove_x(my_string[1: ])
+    
+# print(remove_x("axbxidxexk")) # Should print "abidek"
+# print(remove_x("xbox"))       # Should print "bo"
+
+def flatten_list(nested_list):
+    if nested_list==[]:
+        return []
+    
+    if isinstance(nested_list[0], list ):
+        return flatten_list(nested_list[0]) + flatten_list(nested_list[1: ])
     else:
-        return count_evens(mylist[1:])
-print(count_evens([2, 5, 4, 7, 8]))  # Should print 3 (because 2, 4, and 8 are even)
-print(count_evens([1, 3, 5, 7, 9]))  # Should print 0
+        return [nested_list[0]] + flatten_list(nested_list[1:])
+
+print(flatten_list([1, [2, 3], 4]))    # Should print [1, 2, 3, 4]
+print(flatten_list([[1, 2], [3, 4]]))  # Should print [1, 2, 3, 4]
