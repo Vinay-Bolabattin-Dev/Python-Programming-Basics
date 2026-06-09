@@ -245,14 +245,36 @@
 # print(remove_x("axbxidxexk")) # Should print "abidek"
 # print(remove_x("xbox"))       # Should print "bo"
 
-def flatten_list(nested_list):
-    if nested_list==[]:
-        return []
+# def flatten_list(nested_list):
+#     if nested_list==[]:
+#         return []
     
-    if isinstance(nested_list[0], list ):
-        return flatten_list(nested_list[0]) + flatten_list(nested_list[1: ])
-    else:
-        return [nested_list[0]] + flatten_list(nested_list[1:])
+#     if isinstance(nested_list[0], list ):
+#         return flatten_list(nested_list[0]) + flatten_list(nested_list[1: ])
+#     else:
+#         return [nested_list[0]] + flatten_list(nested_list[1:])
 
-print(flatten_list([1, [2, 3], 4]))    # Should print [1, 2, 3, 4]
-print(flatten_list([[1, 2], [3, 4]]))  # Should print [1, 2, 3, 4]
+# print(flatten_list([1, [2, 3], 4]))    # Should print [1, 2, 3, 4]
+# print(flatten_list([[1, 2], [3, 4]]))  # Should print [1, 2, 3, 4]
+
+# def multiply_chars(my_string, n ):
+
+#     if my_string=="":
+#         return ''
+#     return (my_string[0] * n) + multiply_chars(my_string[1:],n)
+
+
+# print(multiply_chars("abc", 3))   # Should print "aaabbbccc"
+# print(multiply_chars("vinay", 2)) # Should print "vviinnaayy"
+
+def is_sorted(mylist):
+    if len(mylist)<=1:
+        return True
+    
+    if mylist[0] > mylist[1]:
+        return False
+    
+    return is_sorted(mylist[1: ])
+print(is_sorted([1, 3, 5, 8]))  # Should print True
+print(is_sorted([1, 7, 5, 9]))  # Should print False (because 7 is greater than 5)
+        
