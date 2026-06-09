@@ -267,14 +267,35 @@
 # print(multiply_chars("abc", 3))   # Should print "aaabbbccc"
 # print(multiply_chars("vinay", 2)) # Should print "vviinnaayy"
 
-def is_sorted(mylist):
-    if len(mylist)<=1:
-        return True
+# def is_sorted(mylist):
+#     if len(mylist)<=1:
+#         return True
     
-    if mylist[0] > mylist[1]:
-        return False
+#     if mylist[0] > mylist[1]:
+#         return False
     
-    return is_sorted(mylist[1: ])
-print(is_sorted([1, 3, 5, 8]))  # Should print True
-print(is_sorted([1, 7, 5, 9]))  # Should print False (because 7 is greater than 5)
+#     return is_sorted(mylist[1: ])
+# print(is_sorted([1, 3, 5, 8]))  # Should print True
+# print(is_sorted([1, 7, 5, 9]))  # Should print False (because 7 is greater than 5)
         
+    
+# def find_index(mylist, target , current_idx=0):
+#     if mylist==[]:
+#         return -1
+    
+#     if mylist[0]==target:
+#         return current_idx
+#     else:
+#         return find_index(mylist[1:], target, current_idx + 1)
+    
+# print(find_index([10, 20, 30, 40], 30))  # Should print 2
+# print(find_index([10, 20, 30, 40], 99))  # Should print -1
+
+def power(base, exponent):
+    if exponent==0:
+        return 1
+    
+    return base*power(base,exponent -1 )
+print(power(2, 3))  # Should print 8  (2 * 2 * 2)
+print(power(5, 2))  # Should print 25 (5 * 5)
+print(power(7, 0))  # Should print 1  (Any number to the power of 0 is 1)
