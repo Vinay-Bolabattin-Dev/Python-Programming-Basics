@@ -96,7 +96,7 @@ A structured tracking module for mastering data keys, nesting, and web serializa
 - [x] Initialize module (`dictionary_notes.py`)
 - [x] Core Syntax: Constructing `{key: value}` maps
 - [x] Data Retrieval: Reading values safely via explicit keys
-- [ ] State Manipulation: Adding new pairs & updating existing values
+- [x] State Manipulation: Adding new pairs & updating existing values
 - [ ] Data Eviction: Removing records using `del` and `.pop()`
 
 ## ⚙️ PHASE 2: Core Methods & Traversal
