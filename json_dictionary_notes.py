@@ -36,21 +36,63 @@
 # inventory["bricks"]+=200
 # print(inventory)
 
-truck_load={
-    "cement_bags":10,
-    "iron_rods":4,
+# truck_load={
+#     "cement_bags":10,
+#     "iron_rods":4,
+# }
+
+# new_dilivery={
+#     "cement_bags" :25,
+#     "safety_comes": 6,
+# }
+
+# for key, value  in new_dilivery.items():
+#     if key in truck_load:
+#         truck_load[key]=truck_load[key]+value
+#     else:
+#         truck_load[key] = value
+# print(truck_load)
+
+  
+""" 
+========================================
+ del keyword & .pop() metohd
+========================================="""
+
+# scarp_yard={
+#     "broken_chair": 1,
+#     "old_newspaper":5,
+#     "damaged_cable":3,
+# }
+# print(scarp_yard)
+# del scarp_yard["broken_chair"]
+# print(scarp_yard)
+# recycled_paper=scarp_yard.pop("old_newspaper")
+# print(recycled_paper)
+# print(scarp_yard)
+
+# site_manifest={
+#     "surplus_bricks": 120,
+#     "broken_tiles":45 ,
+# }
+
+# status= site_manifest.pop("missing_pallets", "iteam not found in database") 
+# print(site_manifest)
+# print(status)
+
+site_waste={
+    "cocrete_rubble":500,
+    "plastic_warps":5,
+    "broken_timber":250,
+    "paper_cups": 2,
 }
+iteam_to_remove=[]
 
-new_dilivery={
-    "cement_bags" :25,
-    "safety_comes": 6,
-}
+for s in site_waste:
+    if site_waste[s]<=10:
+        iteam_to_remove.append(s)
 
-for key, value  in new_dilivery.items():
-    if key in truck_load:
-        truck_load[key]=truck_load[key]+value
-    else:
-        truck_load[key] = value
-print(truck_load)
-
-    
+for a in iteam_to_remove:
+        site_waste.pop(a)
+print(site_waste)
+        

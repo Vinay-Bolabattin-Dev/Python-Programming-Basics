@@ -97,7 +97,7 @@ A structured tracking module for mastering data keys, nesting, and web serializa
 - [x] Core Syntax: Constructing `{key: value}` maps
 - [x] Data Retrieval: Reading values safely via explicit keys
 - [x] State Manipulation: Adding new pairs & updating existing values
-- [ ] Data Eviction: Removing records using `del` and `.pop()`
+- [x] Data Eviction: Removing records using `del` and `.pop()`
 
 ## ⚙️ PHASE 2: Core Methods & Traversal
 - [ ] Crash Prevention: Fetching values safely using `.get()`
