@@ -80,19 +80,29 @@
 # print(site_manifest)
 # print(status)
 
-site_waste={
-    "cocrete_rubble":500,
-    "plastic_warps":5,
-    "broken_timber":250,
-    "paper_cups": 2,
-}
-iteam_to_remove=[]
+# site_waste={
+#     "cocrete_rubble":500,
+#     "plastic_warps":5,
+#     "broken_timber":250,
+#     "paper_cups": 2,
+# }
+# iteam_to_remove=[]
 
-for s in site_waste:
-    if site_waste[s]<=10:
-        iteam_to_remove.append(s)
+# for s in site_waste:
+#     if site_waste[s]<=10:
+#         iteam_to_remove.append(s)
 
-for a in iteam_to_remove:
-        site_waste.pop(a)
-print(site_waste)
+# for a in iteam_to_remove:
+#         site_waste.pop(a)
+# print(site_waste)
         
+site_equipment={
+    "excavator": 1,
+    "drilling_machine": 2,
+    
+}    
+safe_look= site_equipment.get("concerte_mixer")# after writing it so it doesn't crash your script!
+print(safe_look)
+
+custom_look=site_equipment.get("concerte_mixer", 0)
+print(custom_look)
