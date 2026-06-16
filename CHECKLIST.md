@@ -100,9 +100,9 @@ A structured tracking module for mastering data keys, nesting, and web serializa
 - [x] Data Eviction: Removing records using `del` and `.pop()`
 
 ## ⚙️ PHASE 2: Core Methods & Traversal
-- [ ] Crash Prevention: Fetching values safely using `.get()`
-- [ ] Data Extraction: Isolating `.keys()`, `.values()`, and `.items()`
-- [ ] Iteration Flow: Scanning data records using structured `for` loops
+- [x] Crash Prevention: Fetching values safely using `.get()`
+- [x] Data Extraction: Isolating `.keys()`, `.values()`, and `.items()`
+- [x] Iteration Flow: Scanning data records using structured `for` loops
 - [ ] Data Hierarchies: Designing nested structures (Objects inside Objects)
 
 ## 🌐 PHASE 3: The JSON Pipeline (API Ready)

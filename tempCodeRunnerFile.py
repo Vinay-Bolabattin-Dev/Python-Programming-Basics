@@ -95,14 +95,77 @@
 # for a in iteam_to_remove:
 #         site_waste.pop(a)
 # print(site_waste)
-        
-site_equipment={
-    "excavator": 1,
-    "drilling_machine": 2,
-    
-}    
-safe_look= site_equipment.get("concerte_mixer")# after writing it so it doesn't crash your script!
-print(safe_look)
 
-custom_look=site_equipment.get("concerte_mixer", 0)
-print(custom_look)
+"""" .get() method """
+        
+# site_equipment={
+#     "excavator": 1,
+#     "drilling_machine": 2,
+    
+# }    
+# safe_look= site_equipment.get("concerte_mixer")# after writing it so it doesn't crash your script!
+# print(safe_look)
+
+# custom_look=site_equipment.get("concerte_mixer", 0)
+# print(custom_look)
+
+# project_requirements={
+#     "excavator":2,
+#     "dump_truck":5,
+#     "crane":0,
+
+# }
+# qty=project_requirements.get("bulldozer", 0)
+# print(qty)
+# if qty>0:
+#     print("Equiment is available on site")
+# else:
+#     print("Order required immediately!! ")
+
+""""
+=============================================
+ `.keys()`, `.values()`, and `.items()`
+---------------------------------------------
+ """
+
+# row_materials={
+#     "cement":150,
+#     "steel_bars":80,
+#     "sand":300,
+
+# }
+# all_keys=row_materials.keys()
+# print(all_keys)
+
+# all_values=row_materials.values()
+# print(all_values)
+
+# all_pairs=row_materials.items()
+# print(all_pairs)
+
+# clean_keys_list=list(row_materials.keys())
+# print(clean_keys_list)
+
+# if "timber" in clean_keys_list:
+#     print("timber is registered ")
+# else:
+#     print("timber is missing from inventory lists")
+
+""" Iteration Flow using .items() and for loops  """
+
+labor_force={
+    "masons":12,
+    "carpenters": 4,
+    "helpers":25,
+
+}
+total_workers=0
+for role, coumt in labor_force.items():
+    print(f"Role: {role} | Workers:{coumt}")
+    if coumt >5:
+        print(f"large crew required for {role}:{coumt} workers")
+
+
+for role, count in labor_force.items():
+    total_workers +=count
+print(f"Total workforce deployment: {total_workers}")
