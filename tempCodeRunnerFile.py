@@ -153,19 +153,47 @@
 
 """ Iteration Flow using .items() and for loops  """
 
-labor_force={
-    "masons":12,
-    "carpenters": 4,
-    "helpers":25,
+# labor_force={
+#     "masons":12,
+#     "carpenters": 4,
+#     "helpers":25,
 
+# }
+# total_workers=0
+# for role, coumt in labor_force.items():
+#     print(f"Role: {role} | Workers:{coumt}")
+#     if coumt >5:
+#         print(f"large crew required for {role}:{coumt} workers")
+
+
+# for role, count in labor_force.items():
+#     total_workers +=count
+# print(f"Total workforce deployment: {total_workers}")
+
+""" Data Hierachies  (Nested objects)"""
+
+# site_details = {
+#     "project_A": {
+#         "location": "Sector 5",
+#         "budget": 50000
+#     }
+# }
+
+# project_budget= site_details["project_A"]['budget']
+# print(project_budget)
+
+# safe_budget= site_details.get("project_B", {}).get("budget", 0)
+# print(safe_budget)
+
+company_branches = {
+    "North_Branch": {"active_projects": 3},
+    "South_Branch": {"active_projects": 5},
+    "East_Branch": {}  # Notice this branch has no active_projects key inside it!
 }
-total_workers=0
-for role, coumt in labor_force.items():
-    print(f"Role: {role} | Workers:{coumt}")
-    if coumt >5:
-        print(f"large crew required for {role}:{coumt} workers")
 
 
-for role, count in labor_force.items():
-    total_workers +=count
-print(f"Total workforce deployment: {total_workers}")
+total_active_projects=0
+
+for branch , data in company_branches.items():
+    if data==company_branches.get("active_projects"):
+        print(data)
