@@ -83,7 +83,6 @@ ________________________________________________________________________
 
 ======================================================================================================
 ======================================================================================================
-======================================================================================================
             JSON (Java script object Notation )
 ______________________________________________________________________________________________________    
 # 📊 Python Dictionaries & JSON Learning Roadmap
@@ -106,7 +105,7 @@ A structured tracking module for mastering data keys, nesting, and web serializa
 - [x] Data Hierarchies: Designing nested structures (Objects inside Objects)
 
 ## 🌐 PHASE 3: The JSON Pipeline (API Ready)
-- [ ] Data Mapping: Comparing Python Dict structures vs Raw JSON strings
+- [x] Data Mapping: Comparing Python Dict structures vs Raw JSON strings
 - [ ] Deserialization: Parsing incoming strings into Dicts using `json.loads()`
 - [ ] Serialization: Converting Dicts into transportable strings using `json.dumps()`
 - [ ] File I/O: Reading and writing directly to external `.json` files
