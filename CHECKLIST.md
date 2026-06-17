@@ -103,7 +103,7 @@ A structured tracking module for mastering data keys, nesting, and web serializa
 - [x] Crash Prevention: Fetching values safely using `.get()`
 - [x] Data Extraction: Isolating `.keys()`, `.values()`, and `.items()`
 - [x] Iteration Flow: Scanning data records using structured `for` loops
-- [ ] Data Hierarchies: Designing nested structures (Objects inside Objects)
+- [x] Data Hierarchies: Designing nested structures (Objects inside Objects)
 
 ## 🌐 PHASE 3: The JSON Pipeline (API Ready)
 - [ ] Data Mapping: Comparing Python Dict structures vs Raw JSON strings

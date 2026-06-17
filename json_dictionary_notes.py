@@ -185,15 +185,32 @@
 # safe_budget= site_details.get("project_B", {}).get("budget", 0)
 # print(safe_budget)
 
-company_branches = {
-    "North_Branch": {"active_projects": 3},
-    "South_Branch": {"active_projects": 5},
-    "East_Branch": {}  # Notice this branch has no active_projects key inside it!
+# company_branches = {
+#     "North_Branch": {"active_projects": 3},
+#     "South_Branch": {"active_projects": 5},
+#     "East_Branch": {}  # Notice this branch has no active_projects key inside it!
+# }
+
+
+# total_active_projects=0
+
+# for branch , data in company_branches.items():
+#     count=data.get("active_projects", 0)
+#     total_active_projects += count
+#     print(count)
+
+# print(f"Total company active projects: {total_active_projects}")
+
+server_farm={
+    "server_Alpha": {"sessions": 140},
+    "sever_Beta":{"sessions": 210},
+    "server_Game":{} 
 }
 
+total_sessions=0
+for server , session in server_farm.items():
+    session_count=session.get("sessions", 0)
+    total_sessions += session_count
+    print(session_count)
 
-total_active_projects=0
-
-for branch , data in company_branches.items():
-    if data==company_branches.get("active_projects"):
-        print(data)
+print(f"total network traffic : {total_sessions} active users")
