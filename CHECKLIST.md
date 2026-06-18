@@ -106,6 +106,6 @@ A structured tracking module for mastering data keys, nesting, and web serializa
 
 ## 🌐 PHASE 3: The JSON Pipeline (API Ready)
 - [x] Data Mapping: Comparing Python Dict structures vs Raw JSON strings
-- [ ] Deserialization: Parsing incoming strings into Dicts using `json.loads()`
-- [ ] Serialization: Converting Dicts into transportable strings using `json.dumps()`
+- [x] Deserialization: Parsing incoming strings into Dicts using `json.loads()`
+- [x] Serialization: Converting Dicts into transportable strings using `json.dumps()`
 - [ ] File I/O: Reading and writing directly to external `.json` files

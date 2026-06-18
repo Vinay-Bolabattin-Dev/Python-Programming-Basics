@@ -201,16 +201,18 @@
 
 # print(f"Total company active projects: {total_active_projects}")
 
-server_farm={
-    "server_Alpha": {"sessions": 140},
-    "sever_Beta":{"sessions": 210},
-    "server_Game":{} 
-}
+# server_farm={
+#     "server_Alpha": {"sessions": 140},
+#     "sever_Beta":{"sessions": 210},
+#     "server_Game":{} 
+# }
 
-total_sessions=0
-for server , session in server_farm.items():
-    session_count=session.get("sessions", 0)
-    total_sessions += session_count
-    print(session_count)
+# total_sessions=0
+# for server , session in server_farm.items():
+#     session_count=session.get("sessions", 0)
+#     total_sessions += session_count
+#     print(session_count)
 
-print(f"total network traffic : {total_sessions} active users")
+# print(f"total network traffic : {total_sessions} active users")
+
+
