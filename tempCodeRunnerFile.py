@@ -76,12 +76,70 @@ import json
 
 """ Hard Level : Serialization (json.dumnps )"""
 
-analytics_data = {
-    "platform": "Instagram",
-    "metrics": [
-        {"type": "reel", "count": 12},
-        {"type": "story", "count": 25}
-    ]
-}
-pretty_json_string=json.dumps(analytics_data, indent= 4)
-print(pretty_json_string)
+# analytics_data = {
+#     "platform": "Instagram",
+#     "metrics": [
+#         {"type": "reel", "count": 12},
+#         {"type": "story", "count": 25}
+#     ]
+# }
+# pretty_json_string=json.dumps(analytics_data, indent= 4)
+# print(pretty_json_string)
+
+""" milestone 4 :  json File I/O json.load(), json.dump()"""
+
+
+""" Easy level Write and read operation """
+# export_data = {
+#     "format": "Mp4",
+#     "fps": 60,
+#     "render": True
+# }
+
+# with open("reel_config.json", 'w') as file:
+#     json_file=json.dump(export_data,file)
+
+# with open("reel_config.json", "r") as file:
+#     impoerted_dict=json.load(file)
+#     print(f" Loaded Dicitnary Data: {impoerted_dict}")
+
+""" Medium level Write and read operation """
+
+
+# project_data = {
+#     "project_name": "Reel_V1",
+#     "settings": {
+#         "resolution": "1080x1920",
+#         "audio_boost": True
+#     }
+# }
+
+# with open("formatted_project.json", "w") as file:
+#     A=json.dump(project_data, file, indent=4)
+
+# with open("formatted_project.json", "r") as file:
+#     loaded_project=json.load(file)
+
+# video_res= loaded_project.get("settings").get("resolution")
+# print(f"Target Resolution: { video_res}")
+
+""" Hard level Write and read operation """
+
+raw_batch = {"batch_id": 101, "clips": [{"id": "A", "duration": 15}, {"id": "B", "duration": 30}]}
+
+with open("input_batch.json", "w") as file:
+    json.dump(raw_batch, file)
+
+with open("input_batch.json", "r") as infile:
+    batch_dict=json.load(infile)
+
+total_duration=0
+clip_list=batch_dict.get("clips", [])
+
+for clip in clip_list:
+   total_duration += clip.get("duration", 0)
+
+batch_dict["total_routine"] = total_duration
+
+with open ("processed_batch.json", "w") as outfile:
+    json.dump(batch_dict,outfile,indent=4)
