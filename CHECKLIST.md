@@ -109,3 +109,13 @@ A structured tracking module for mastering data keys, nesting, and web serializa
 - [x] Deserialization: Parsing incoming strings into Dicts using `json.loads()`
 - [x] Serialization: Converting Dicts into transportable strings using `json.dumps()`
 - [x] File I/O: Reading and writing directly to external `.json` files
+
+======================================================================================================
+======================================================================================================
+             NETWORK I/O & LIVE APIs (The Connected System)
+______________________________________________________________________________________________________    
+- [ ] Simulation Mechanics: Handling status codes via Mock Response objects
+- [ ] Dependency Management: Installing third-party modules safely via `pip`
+- [ ] The Living Connection: Making live `requests.get()` calls to real web URLs
+- [ ] Parsing the Web: Decoding remote JSON payloads into active Python memory
+- [ ] Local Caching: Writing network-fetched JSON data directly into persistent storage files
