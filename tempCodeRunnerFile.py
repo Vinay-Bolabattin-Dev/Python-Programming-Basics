@@ -108,26 +108,26 @@
 
 
 
-class OrderRecepit:
-    def __init__(self,status_code, payload):
-        self.status_code=status_code
-        self.payload=payload
+# class OrderRecepit:
+#     def __init__(self,status_code, payload):
+#         self.status_code=status_code
+#         self.payload=payload
 
-def process_order(item_id,quantity):
-    stock_room={"phone": 5 , "laptop":2}
+# def process_order(item_id,quantity):
+#     stock_room={"phone": 5 , "laptop":2}
 
-    if item_id not in stock_room:
-        return OrderRecepit(404,'{error: "Item out of stock or does not exist!!" }')
-    elif item_id in stock_room and quantity>stock_room[item_id]:
-        return OrderRecepit(400,'{"error": "Insufficient stock avaliable"}')
-    else:
-        return OrderRecepit(200,'{"status": "Order approved", " shippling": true}')
+#     if item_id not in stock_room:
+#         return OrderRecepit(404,'{error: "Item out of stock or does not exist!!" }')
+#     elif item_id in stock_room and quantity>stock_room[item_id]:
+#         return OrderRecepit(400,'{"error": "Insufficient stock avaliable"}')
+#     else:
+#         return OrderRecepit(200,'{"status": "Order approved", " shippling": true}')
     
-order_call= process_order("phone", 10)
+# order_call= process_order("phone", 10)
 
-if order_call.status_code==200:
-    print(f"successfully Ordered: {process_order.payload}")
-elif order_call.status_code==404:
-    print(f'unsuccessful order: {process_order.payload}')
-else:
-    print(f" Sorry!! Insufficinet stock")
+# if order_call.status_code==200:
+#     print(f"successfully Ordered: {process_order.payload}")
+# elif order_call.status_code==404:
+#     print(f'unsuccessful order: {process_order.payload}')
+# else:
+#     print(f" Sorry!! Insufficinet stock")
