@@ -131,3 +131,32 @@
 #     print(f'unsuccessful order: {process_order.payload}')
 # else:
 #     print(f" Sorry!! Insufficinet stock")
+
+""" 
+=================================================================================================
+ Milestone no 3: LIVE HTTP GET REQUEST (request.get)
+=================================================================================================="""
+
+import requests
+
+
+# live_response=requests.get("https://www.youtube.com/")
+
+# if live_response.status_code==200:
+#     print("Connection Successful!! ")
+#     print("----Here is Raw text from web ---")
+#     print(live_response.text)
+# else:
+#     print(f"failed to connect. Status code : {live_response.status_code}")
+
+new_live_response=requests.get("https://docs.googleapis.com/$discovery/rest?version=v1")
+
+if new_live_response.status_code !=200:
+    print("Error!! ")
+else:
+    print(f"Successful connection !! {new_live_response.text}")
+
+if "rare" in new_live_response.text or "rare_float" in new_live_response.text:
+    print("yes rare and rare_float are present in this text page")
+else:
+    print("No words releteed to that ")
