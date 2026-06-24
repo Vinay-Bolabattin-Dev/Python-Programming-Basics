@@ -149,14 +149,45 @@ import requests
 # else:
 #     print(f"failed to connect. Status code : {live_response.status_code}")
 
-new_live_response=requests.get("https://docs.googleapis.com/$discovery/rest?version=v1")
+# new_live_response=requests.get("https://docs.googleapis.com/$discovery/rest?version=v1")
 
-if new_live_response.status_code !=200:
-    print("Error!! ")
-else:
-    print(f"Successful connection !! {new_live_response.text}")
+# if new_live_response.status_code !=200:
+#     print("Error!! ")
+# else:
+#     print(f"Successful connection !! {new_live_response.text}")
 
-if "rare" in new_live_response.text or "rare_float" in new_live_response.text:
-    print("yes rare and rare_float are present in this text page")
+# if "rare" in new_live_response.text or "rare_float" in new_live_response.text:
+#     print("yes rare and rare_float are present in this text page")
+# else:
+#     print("No words releteed to that ")
+
+
+
+# Hard_level_response=requests.get("http://universities.hipolabs.com/search?country=India")
+
+# if Hard_level_response.status_code != 200:
+#     print("Network Error")
+# else:
+#     print("successful")
+
+# if "Solapur" in Hard_level_response.text:
+#     print("Success!!  Solapur university data is live inside the playload.")
+# else:
+#     print("Connected!! But Solapur wasn't found in the data")
+
+
+"""
+================================================================
+ Milestone 4: Parsing web Data (JSON DECODING )
+================================================================="""
+
+response = requests.get("http://universities.hipolabs.com/search?country=India")
+
+if response.status_code == 200:
+    clean_data=response.json()
+
+    print(f"Type of response.text: {type(response.text)}")
+    print(f"Type of response.json(): {type(clean_data)}")
+    print(f"Total Indian universities decoded: {len(clean_data)}")
 else:
-    print("No words releteed to that ")
+    print("failed to pull live data")
