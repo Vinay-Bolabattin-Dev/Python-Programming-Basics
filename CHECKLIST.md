@@ -116,6 +116,6 @@ A structured tracking module for mastering data keys, nesting, and web serializa
 ______________________________________________________________________________________________________    
 - [x] Simulation Mechanics: Handling status codes via Mock Response objects
 - [x] Dependency Management: Installing third-party modules safely via `pip`
-- [ ] The Living Connection: Making live `requests.get()` calls to real web URLs
+- [x] The Living Connection: Making live `requests.get()` calls to real web URLs
 - [ ] Parsing the Web: Decoding remote JSON payloads into active Python memory
 - [ ] Local Caching: Writing network-fetched JSON data directly into persistent storage files
