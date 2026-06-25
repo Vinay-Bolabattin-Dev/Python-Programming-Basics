@@ -181,13 +181,21 @@ import requests
  Milestone 4: Parsing web Data (JSON DECODING )
 ================================================================="""
 
-response = requests.get("http://universities.hipolabs.com/search?country=India")
+# response = requests.get("http://universities.hipolabs.com/search?country=India")
 
-if response.status_code == 200:
-    clean_data=response.json()
+# if response.status_code == 200:
+#     clean_data=response.json()
 
-    print(f"Type of response.text: {type(response.text)}")
-    print(f"Type of response.json(): {type(clean_data)}")
-    print(f"Total Indian universities decoded: {len(clean_data)}")
-else:
-    print("failed to pull live data")
+#     print(f"Type of response.text: {type(response.text)}")
+#     print(f"Type of response.json(): {type(clean_data)}")
+#     print(f"Total Indian universities decoded: {len(clean_data)}")
+# else:
+#     print("failed to pull live data")
+
+easy_resopnse=requests.get("http://api.open-notify.org/iss-now.json")
+
+if easy_resopnse.status_code==200:
+    knowtype=easy_resopnse.json()
+
+    print(type(easy_resopnse))
+    print(type(knowtype))
