@@ -192,10 +192,40 @@ import requests
 # else:
 #     print("failed to pull live data")
 
-easy_resopnse=requests.get("http://api.open-notify.org/iss-now.json")
+# easy_resopnse=requests.get("http://api.open-notify.org/iss-now.json")
 
-if easy_resopnse.status_code==200:
-    knowtype=easy_resopnse.json()
+# if easy_resopnse.status_code==200:
+#     knowtype=easy_resopnse.json()
 
-    print(type(easy_resopnse))
-    print(type(knowtype))
+#     print(type(easy_resopnse))
+#     print(type(knowtype))
+
+
+# medium_response=requests.get("http://api.open-notify.org/iss-now.json")
+
+# if medium_response.status_code==200:
+#     iss=medium_response.json()
+#     print(iss)
+
+#     position_box=iss["iss_position"]
+
+#     acutal_lat=position_box["latitude"]
+#     print(acutal_lat)
+
+medium_part2_respose=requests.get("https://api.github.com/users/octocat")
+
+if medium_part2_respose.status_code==200:
+    converting=medium_part2_respose.json()
+    # print(converting)
+
+    # username=converting["name"]
+    # print(username)
+    # username=converting["followers"]
+    # print(username)
+    # username=converting["public_repos"]
+    # print(username)
+
+    target_key=["name", "followers", "public_repos"]
+    for key in target_key:
+        print(converting[key])
+        
