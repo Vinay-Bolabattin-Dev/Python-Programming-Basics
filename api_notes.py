@@ -212,20 +212,37 @@ import requests
 #     acutal_lat=position_box["latitude"]
 #     print(acutal_lat)
 
-medium_part2_respose=requests.get("https://api.github.com/users/octocat")
+# medium_part2_respose=requests.get("https://api.github.com/users/octocat")
 
-if medium_part2_respose.status_code==200:
-    converting=medium_part2_respose.json()
-    # print(converting)
+# if medium_part2_respose.status_code==200:
+#     converting=medium_part2_respose.json()
+#     # print(converting)
 
-    # username=converting["name"]
-    # print(username)
-    # username=converting["followers"]
-    # print(username)
-    # username=converting["public_repos"]
-    # print(username)
+#     # username=converting["name"]
+#     # print(username)
+#     # username=converting["followers"]
+#     # print(username)
+#     # username=converting["public_repos"]
+#     # print(username)
 
-    target_key=["name", "followers", "public_repos"]
-    for key in target_key:
-        print(converting[key])
+#     target_key=["name", "followers", "public_repos"]
+#     for key in target_key:
+#         print(converting[key])
         
+hard_response=requests.get("http://universities.hipolabs.com/search?country=India")
+
+if hard_response.status_code==200:
+    converting=hard_response.json()
+    print(converting)
+
+
+
+
+    
+import requests
+
+# 1. Fetch the national database payload
+response = requests.get("http://universities.hipolabs.com/search?country=India")
+
+# 2. Convert it into our master list of 474 universities
+all_universities = response.json()
