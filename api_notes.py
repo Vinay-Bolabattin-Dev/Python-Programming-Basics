@@ -229,20 +229,25 @@ import requests
 #     for key in target_key:
 #         print(converting[key])
         
-hard_response=requests.get("http://universities.hipolabs.com/search?country=India")
+# hard_response=requests.get("http://universities.hipolabs.com/search?country=India")
 
-if hard_response.status_code==200:
-    converting=hard_response.json()
-    print(converting)
+# if hard_response.status_code==200:
+#     all_universities=hard_response.json()
+
+# for university in all_universities:
+#     if "Solapur" in university["name"]:
+#         print(university["name"])
+#         print(university["web_pages"][0])
+    
 
 
 
 
     
-import requests
+hard_level_part2=requests.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd")
+coins_market=hard_level_part2.json()
 
-# 1. Fetch the national database payload
-response = requests.get("http://universities.hipolabs.com/search?country=India")
-
-# 2. Convert it into our master list of 474 universities
-all_universities = response.json()
+for coin in coins_market:
+    if coin["market_cap"]> 50000000000:
+        print(coin["name"])
+        print(coin["current_price"])
