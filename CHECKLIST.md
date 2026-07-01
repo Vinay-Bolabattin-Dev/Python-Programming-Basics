@@ -119,3 +119,26 @@ ________________________________________________________________________________
 - [x] The Living Connection: Making live `requests.get()` calls to real web URLs
 - [x] Parsing the Web: Decoding remote JSON payloads into active Python memory
 - [x] Local Caching: Writing network-fetched JSON data directly into persistent storage files
+
+========================================================================================================
+##       WEB BACKEND & SQL DATABASE (The Data-Driven Server)
+========================================================================================================
+
+## Phase : Web Architecture & HTTP Essentials 
+
+- [ ] Initialize backend environment (backend_notes.py)
+- [ ] The Client-Server Model: Understanding how apps and browsers request data from a server
+- [ ] HTTP Methods: Mastering the core actions (GET, POST, PUT, DELETE)
+- [ ] HTTP Status Codes: Decoding responses (200 OK, 201 Created, 404 Not Found, 500 Server Error)
+---------------------------------------------------------------------------------------------------------
+
+
+## Phase : SQL & Database Foundations (From Scratch)
+- [ ] Database Basics: Understanding tables, columns, rows, and Primary Keys
+- [ ] SQL Basics (CRUD): Writing raw queries to create data (INSERT), read data (SELECT), update data (UPDATE), and delete data (DELETE)
+- [ ] Filtering Data: Using WHERE, AND/OR, and sorting results using ORDER BY
+--------------------------------------------------------------------------------------------------------
+
+## Phase : Connecting Python to SQL (The Final Bridge)
+- [ ] The Database Driver: Using Python's built-in sqlite3 module to run SQL commands from your script
+- [ ] The Full Cycle: Building a Python application that takes user input, stores it permanently in an SQL database, and reads it back out
