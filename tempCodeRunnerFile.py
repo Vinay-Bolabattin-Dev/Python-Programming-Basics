@@ -244,10 +244,39 @@ import requests
 
 
     
-hard_level_part2=requests.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd")
-coins_market=hard_level_part2.json()
+# hard_level_part2=requests.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd")
+# coins_market=hard_level_part2.json()
 
-for coin in coins_market:
-    if coin["market_cap"]> 50000000000:
-        print(coin["name"])
-        print(coin["current_price"])
+# for coin in coins_market:
+#     if coin["market_cap"]> 50000000000:
+#         print(coin["name"])
+#         print(coin["current_price"])
+
+
+
+""" Milestone no 5 : Local Caching: Writing network-fetched JSON data directly into persistent storage files"""
+
+
+import json
+import requests
+
+milestone5=requests.get("http://api.open-notify.org/iss-now.json")
+easy_level=milestone5.json()
+
+with open("iss_cache.json", "w") as file:
+    json.dump(easy_level, file)
+
+
+with open ("iss_cache.json", "r") as file :
+    cache_data=json.load(file)
+    print(cache_data["iss_position"])
+
+
+try:
+    hard_level=milestone5.json()
+    with open("iss_cache", "w") as file:
+        json.dump(hard_level, file)
+except:
+    with open("is_cache", "r") as file:
+        updated_cache_data=json.load(file)
+        print(updated_cache_data["longitude"])

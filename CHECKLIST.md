@@ -118,4 +118,4 @@ ________________________________________________________________________________
 - [x] Dependency Management: Installing third-party modules safely via `pip`
 - [x] The Living Connection: Making live `requests.get()` calls to real web URLs
 - [x] Parsing the Web: Decoding remote JSON payloads into active Python memory
-- [ ] Local Caching: Writing network-fetched JSON data directly into persistent storage files
+- [x] Local Caching: Writing network-fetched JSON data directly into persistent storage files

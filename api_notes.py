@@ -259,3 +259,24 @@ import requests
 
 import json
 import requests
+
+milestone5=requests.get("http://api.open-notify.org/iss-now.json")
+easy_level=milestone5.json()
+
+with open("iss_cache.json", "w") as file:
+    json.dump(easy_level, file)
+
+
+with open ("iss_cache.json", "r") as file :
+    cache_data=json.load(file)
+    print(cache_data["iss_position"])
+
+
+try:
+    hard_level=milestone5.json()
+    with open("iss_cache", "w") as file:
+        json.dump(hard_level, file)
+except:
+    with open("is_cache", "r") as file:
+        updated_cache_data=json.load(file)
+        print(updated_cache_data["longitude"])
