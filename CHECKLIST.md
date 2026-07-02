@@ -126,7 +126,7 @@ ________________________________________________________________________________
 
 ## Phase : Web Architecture & HTTP Essentials 
 
-- [ ] Initialize backend environment (backend_notes.py)
+- [x] Initialize backend environment (backend_notes.py)
 - [ ] The Client-Server Model: Understanding how apps and browsers request data from a server
 - [ ] HTTP Methods: Mastering the core actions (GET, POST, PUT, DELETE)
 - [ ] HTTP Status Codes: Decoding responses (200 OK, 201 Created, 404 Not Found, 500 Server Error)
