@@ -112,3 +112,8 @@ if post_reponse.status_code==201:
     print(f"{post_reponse.status_code}: Resourcce successfully Created")
 else:
     print(f"Failed to create resource. Status code:{post_reponse.status_code}")
+
+
+
+
+# Monday Status: House 3D Design Day. Ready to start Phase 2 fresh tomorrow!
