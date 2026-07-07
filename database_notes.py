@@ -1,0 +1,1 @@
+## Database Foundations initialized. SQL for structure, NoSQL for flexibility.
