@@ -67,19 +67,67 @@ cursor=conn.cursor()
 
 import sqlite3
 
-project =sqlite3.connect("studio.db")
+project=sqlite3.connect("studio.db")
+
 cursor=project.cursor()
 
-cursor.execute(""" 
-CREATE TABLE IF NOT EXISTS capcut_project (Project_id INTEGER PRIMARY KEY AUTOINCREMENT,
-Porject_Name TEXT , Duration_seconds INTEGER , Status TEXT DEFAULT "draft")
-""")
+cursor.execute("DROP TABLE IF EXISTS capcut_project")
+print("dropped")
 
-cursor.execute(""" INSERT INTO capcut_project ( Project_Name , Duration_seconds , Status ) 
-VALUES ('Beggning of Contruction' , 30 , "exported")""") 
+cursor.execute(""" CREATE TABLE IF NOT EXISTS capcut_project(Project_id  INTEGER PRIMARY KEY AUTOINCREMENT, Project_name TEXT , Duration_Seconds INTEGER, Status TEXT DEFAULT 'Draft' )""")
 
-cursor.execute("INSERT INTO capcut_project ( Project_Name , Duration_seconds) VALUES ('Bhoomi poojan' , 40 )") 
+
+cursor.execute("""INSERT INTO capcut_project(Project_name , Duration_seconds, Status) VALUES ("Beggining of Contruction ", 30 , "Posted" ) """)
+
+cursor.execute(""" INSERT INTO capcut_project(Project_name, Duration_seconds) VALUES ("Bhoomi poojan", 40)""")  
+
+
+# cursor.close()
+cursor.execute(""" INSERT INTO capcut_project(Project_name, Duration_seconds, Status) VALUES ("DEMOLUSTION WORK", 25, "Posted" )""")
+
+cursor.execute(""" INSERT INTO capcut_project(Project_name, Duration_seconds) VALUES ("Basement Work", 45)""")  
+
+cursor.execute(""" INSERT INTO capcut_project(Project_name, Duration_seconds) VALUES ("Grondfloor mission started ", 50)""")  
+
 project.commit()
+
+print("Records added")
+
+
+cursor.execute("SELECT * FROM capcut_project")
+
+all_records=cursor.fetchall()
+
+# for capcut_project in all_records:
+#     print(capcut_project)
+    
+cursor.execute("SELECT * FROM capcut_project WHERE Duration_seconds >=30")
+
+morethan30=cursor.fetchall()
+# for project in morethan30:
+#     print(project)
+
+cursor.execute(""" SELECT * FROM capcut_project WHERE Duration_seconds <40 AND Status ='Posted' """)
+
+fillter2=cursor.fetchall()
+# for project in fillter2:
+#     print(project)
+
+cursor.execute(""" SELECT * FROM capcut_project WHERE Status !='Posted' """)
+
+draftpost=cursor.fetchall()
+# for project in draftpost:
+#     print(project)
+
+
+cursor.execute(" SELECT * FROM capcut_project ORDER BY Project_id DESC")
+
+Descending_order=cursor.fetchall()
+# for project in Descending_order:
+#     print(project)
+
+cursor.execute(" SELECT * FROM capcut_project ORDER BY Duration_seconds DESC")
+Descending_Duration_time =cursor.fetchall()
+for project in Descending_Duration_time:
+    print(project)
 cursor.close()
-project.close()
-print("Successfully added records")

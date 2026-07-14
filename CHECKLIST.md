@@ -136,7 +136,7 @@ ________________________________________________________________________________
 ## Phase : SQL & Database Foundations (From Scratch)
 - [x] Database Basics: Understanding tables, columns, rows, and Primary Keys
 - [x] SQL Basics (CRUD): Writing raw queries to create data (INSERT), read data (SELECT), update data (UPDATE), and delete data (DELETE)
-- [ ] Filtering Data: Using WHERE, AND/OR, and sorting results using ORDER BY
+- [x] Filtering Data: Using WHERE, AND/OR, and sorting results using ORDER BY
 --------------------------------------------------------------------------------------------------------
 
 ## Phase : Connecting Python to SQL (The Final Bridge)  
