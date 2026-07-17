@@ -133,11 +133,18 @@ ________________________________________________________________________________
 ---------------------------------------------------------------------------------------------------------
 
 
-## Phase : SQL & Database Foundations (From Scratch)
-- [x] Database Basics: Understanding tables, columns, rows, and Primary Keys
-- [x] SQL Basics (CRUD): Writing raw queries to create data (INSERT), read data (SELECT), update data (UPDATE), and delete data (DELETE)
-- [x] Filtering Data: Using WHERE, AND/OR, and sorting results using ORDER BY
-- [x] The Wildcard LIKE Operator (Pattern Matching)
+## Phase: SQL & Database Foundations (From Scratch)
+- [x] Milestone 1: Database Basics (Tables, Columns, Rows, and Primary Keys)
+- [x] Milestone 2: SQL Basics CRUD (Raw CREATE, INSERT, and SELECT queries)
+- [x] Milestone 3: Filtering & Sorting Data (WHERE, AND/OR, and ORDER BY)
+- [x] Milestone 4: Pattern Matching (The Wildcard LIKE Operator)
+- [ ] Milestone 5: Modifying Data Safely (UPDATE & SET with the Golden Rule of WHERE)
+- [ ] Milestone 6: Removing Records (DELETE FROM and table resets)
+- [ ] Milestone 7: Data Integrity & Rules (Constraints: NOT NULL, UNIQUE, CHECK)
+- [ ] Milestone 8: Subset Control (Limiting results with LIMIT & OFFSET)
+- [ ] Milestone 9: Aggregate Inventory Math (COUNT, SUM, AVG, MIN, MAX)
+- [ ] Milestone 10: Summarizing Datasets (GROUP BY & HAVING clauses)
+- [ ] Milestone 11: The Ultimate Foundations Capstone (Python + Construction CLI App)
 --------------------------------------------------------------------------------------------------------
 
 ## Phase : Connecting Python to SQL (The Final Bridge)  
