@@ -183,4 +183,16 @@ verifed_material=cursor.fetchall()
 for contruction in verifed_material:
     print(contruction)
 
+
+
+""" Modifying Data Safely (UPDATE & SET with the Golden Rule of WHERE) """
+
+cursor.execute("UPDATE materials SET Status='Verified' WHERE Item_id=1")
+
+print("updated")
+
+
+cursor.execute("UPDATE materials SET Quantity=25 , Item_name='Crushed Stone Aggregate' WHERE Item_id=4")
+
+print("item no 4 updated ")
 cursor.close()
