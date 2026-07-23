@@ -196,3 +196,8 @@ cursor.execute("UPDATE materials SET Quantity=25 , Item_name='Crushed Stone Aggr
 
 print("item no 4 updated ")
 cursor.close()
+
+
+
+##- [/] Milestone 6: Removing Records (DELETE FROM)
+    #- Note: Re-established PC setup; ready to resume coding with fresh energy tomorrow.
