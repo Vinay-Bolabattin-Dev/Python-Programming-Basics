@@ -167,21 +167,21 @@ contruction.commit()
 
 cursor.execute("SELECT * FROM materials")
 all_records=cursor.fetchall()
-# for contruction in all_records:
-#     print(contruction)
+for  list_of_records in all_records:
+    print(list_of_records)
 
 
 cursor.execute("SELECT * FROM materials WHERE item_name LIKE '%Cement%' ")
 
 cement_only=cursor.fetchall()
-# for contruction in cement_only:
-#     print(contruction)
+# for cement in cement_only:
+#     print(cement)
 
 cursor.execute("SELECT * FROM materials WHERE Status LIKE 'Verified%' ")
 
 verifed_material=cursor.fetchall()
-for contruction in verifed_material:
-    print(contruction)
+# for material in verifed_material:
+#     print(material)
 
 
 
@@ -189,13 +189,13 @@ for contruction in verifed_material:
 
 cursor.execute("UPDATE materials SET Status='Verified' WHERE Item_id=1")
 
-print("updated")
+# print("updated")
 
 
 cursor.execute("UPDATE materials SET Quantity=25 , Item_name='Crushed Stone Aggregate' WHERE Item_id=4")
 
-print("item no 4 updated ")
-cursor.close()
+# print("item no 4 updated ")
+
 
 
 
@@ -203,3 +203,20 @@ cursor.close()
     #- Note: Re-established PC setup; ready to resume coding with fresh energy tomorrow.
 
 
+
+#  Removing Records (DELETE FROM and table resets)
+
+cursor.execute("DELETE FROM materials WHERE Item_id=3")
+
+print("Item 3 successfully Deleted ")
+
+contruction.commit()
+print("====Latest material Inventory=====")
+cursor.execute('SELECT * FROM materials')
+latest_inventory=cursor.fetchall()
+
+for list in latest_inventory:
+    print(list)
+
+cursor.close()
+contruction.close()
