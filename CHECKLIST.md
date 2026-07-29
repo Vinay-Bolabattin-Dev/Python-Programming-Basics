@@ -141,7 +141,7 @@ ________________________________________________________________________________
 - [x] Milestone 5: Modifying Data Safely (UPDATE & SET with the Golden Rule of WHERE)
 - [X] Milestone 6: Removing Records (DELETE FROM and table resets)
 - [x] Milestone 7: Data Integrity & Rules (Constraints: NOT NULL, UNIQUE, CHECK)
-- [ ] Milestone 8: Subset Control (Limiting results with LIMIT & OFFSET)
+- [x] Milestone 8: Subset Control (Limiting results with LIMIT & OFFSET)
 - [ ] Milestone 9: Aggregate Inventory Math (COUNT, SUM, AVG, MIN, MAX)
 - [ ] Milestone 10: Summarizing Datasets (GROUP BY & HAVING clauses)
 - [ ] Milestone 11: The Ultimate Foundations Capstone (Python + Construction CLI App)

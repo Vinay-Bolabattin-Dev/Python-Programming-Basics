@@ -74,7 +74,7 @@ except sqlite3.IntegrityError as e:
 try:
     cursor.execute("INSERT INTO gym_members(member_name , membership_no, age) VALUES('madav', 'GYM-101', 23)")
 except sqlite3.IntegrityError as e:
-    print(f"No Dupication in gym_membersL: {e}")
+    print(f"No Dupication in gym_membership_no : {e}")
 
 
 try:
