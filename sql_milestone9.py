@@ -53,3 +53,8 @@ for runs in total_runs:
 cursor.execute("SELECT AVG(total_runs) FROM odi_batting_stats")
 average_per_batsman=cursor.fetchone()[0]
 print(f"AVRAGE PER BATSMAN :{average_per_batsman}")
+
+
+
+## learned difference between fetchone() vs fetchall()
+
