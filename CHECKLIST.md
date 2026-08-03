@@ -143,7 +143,7 @@ ________________________________________________________________________________
 - [x] Milestone 7: Data Integrity & Rules (Constraints: NOT NULL, UNIQUE, CHECK)
 - [x] Milestone 8: Subset Control (Limiting results with LIMIT & OFFSET)
 - [x] Milestone 9: Aggregate Inventory Math (COUNT, SUM, AVG, MIN, MAX)
-- [ ] Milestone 10: Summarizing Datasets (GROUP BY & HAVING clauses)
+- [\] Milestone 10: Summarizing Datasets (GROUP BY & HAVING clauses)
 - [ ] Milestone 11: The Ultimate Foundations Capstone (Python + Construction CLI App)
 --------------------------------------------------------------------------------------------------------
 
