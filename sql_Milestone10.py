@@ -110,3 +110,20 @@ GROUP BY Players_name
 for row in cursor.fetchall():
     players_name, Avg , Player_type=row
     print(f"Players name:- {players_name}  || Average:{Avg}  || Player Type: {Player_type}")
+
+
+## HAVING 
+
+cursor.execute("""
+SELECT Player_type , COUNT(*), SUM(Runs)
+FROM Mumbai_Indians
+GROUP BY Player_type
+HAVING SUM(Runs)>3000
+""")
+
+print("\n=====Role with the total Runs > 3000===")
+for row in cursor.fetchall():
+    role, count,total_runs=row
+    print(f"Role: {role: <15}| Players: {count} |Total Runs: {total_runs}")
+
+cricket.close()
