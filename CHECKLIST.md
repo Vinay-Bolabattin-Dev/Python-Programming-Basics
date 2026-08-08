@@ -144,7 +144,7 @@ ________________________________________________________________________________
 - [x] Milestone 8: Subset Control (Limiting results with LIMIT & OFFSET)
 - [x] Milestone 9: Aggregate Inventory Math (COUNT, SUM, AVG, MIN, MAX)
 - [x] Milestone 10: Summarizing Datasets (GROUP BY & HAVING clauses)
-- [ ] Milestone 11: The Ultimate Foundations Capstone (Python + Construction CLI App)
+- [x] Milestone 11: The Ultimate Foundations Capstone (Python + Construction CLI App)
 --------------------------------------------------------------------------------------------------------
 
 ## Phase : Connecting Python to SQL (The Final Bridge)  
