@@ -138,13 +138,14 @@ while True:
             new_qty=int(input("Enter a new quantity: "))
 
             cursor.execute("UPDATE materials SET quantity =? WHERE id= ? ", (new_qty ,item_id)) 
+            contrustion.commit()
             print(f"Stock Updated at ID: {item_id}")
 
         case "6":
             print("\n Delete material")
             item_id= int(input("Enter the ID of the material to delete: "))
 
-            cursor.execute("DELETE FROM materials WHERE id=?", (item_id))
+            cursor.execute("DELETE FROM materials WHERE id=?", (item_id,))
 
             contrustion.commit()
             print(f"Enter id {item_id } Deleted Peremanently")
@@ -158,4 +159,4 @@ while True:
 
 
 
-
+### Explored Python sqlite3 driver mechanics and context manager transaction handling
