@@ -90,7 +90,7 @@ while True:
         case "1":
             cursor.execute("SELECT * FROM materials ")
             records=cursor.fetchall()
-            print("All materials lsit ")
+            print("All materials list ")
             for row in records:
                 print(row)
 
