@@ -148,5 +148,5 @@ ________________________________________________________________________________
 --------------------------------------------------------------------------------------------------------
 
 ## Phase : Connecting Python to SQL (The Final Bridge)  
-- [ ] The Database Driver: Using Python's built-in sqlite3 module to run SQL commands from your script
-- [ ] The Full Cycle: Building a Python application that takes user input, stores it permanently in an SQL database, and reads it back out
+- [x] The Database Driver: Using Python's built-in sqlite3 module to run SQL commands from your script
+- [x] The Full Cycle: Building a Python application that takes user input, stores it permanently in an SQL database, and reads it back out
